@@ -1,0 +1,100 @@
+.footer {
+  background-color: #0B0B0B;
+
+  .wrapper {
+    padding-top: 120px;
+    padding-left: 20px;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 75px;
+
+    &:not(:last-child) {
+      margin-right: 190px;
+    }
+
+    &:nth-child(3) {
+      margin-right: auto;
+    }
+
+    &:last-child {
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  &_list_container {
+    display: flex;
+  }
+
+  &_list {
+    @include list;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+
+    &_item {
+      margin-bottom: 30px;
+    }
+
+    &_link {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 15px;
+      color: #999999;
+      text-decoration: none;
+    }
+  }
+
+  &_title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #CCCCCC;
+    margin: 0 0 37px;
+  }
+
+  &_container_articles {
+    margin-right: 0;
+
+    .footer_title {
+      margin-bottom: 30px;
+    }
+
+    .footer_list_link {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 28px;
+      color: #CCCCCC;
+      margin: 0 0 40px;
+    }
+  }
+
+  &_language_list {
+    @include list;
+    justify-content: center;
+    width: 53px;
+    border: 1px solid #3F3F3F;
+    text-align: center;
+  }
+
+  &_language_link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 36px;
+    color: #FFFFFF;
+  }
+
+  &_soc_list {
+    @include list;
+    margin-bottom: 20px;
+  }
+
+  &_soc_item:not(:last-child) {
+    margin-right: 25px;
+  }
+}

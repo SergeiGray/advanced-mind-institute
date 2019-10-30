@@ -1,0 +1,84 @@
+.complex {
+  margin-bottom: 355px;
+
+  .wrapper {
+    position: relative;
+    z-index: -1;
+  }
+
+  &_bg_line {
+    position: absolute;
+    top: -540px;
+    right: 110px;
+    width: 2px;
+    height: 2083px;
+    background-color: rgba(178, 178, 178, 0.13);
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .button_transparent {
+      margin-top: 45px;
+    }
+  }
+
+  &_title {
+    @include title;
+    position: relative;
+    width: 545px;
+    line-height: 160%;
+    margin-bottom: 65px;
+
+    &::after {
+      @include title_line;
+    }
+
+    &::before {
+      z-index: -1;
+      position: absolute;
+      top: -125px;
+      left: 72px;
+      content: '';
+      width: 261px;
+      height: 373px;
+      background-image: url('../img/feedback_title_bg_desktop.png');
+    }
+  }
+
+  &_text {
+    @include text;
+    width: 520px;
+    margin-bottom: 25px;
+  }
+
+  &_timer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    height: 900px;
+    margin-top: -230px;
+    margin-right: 45px;
+    background-image: url("data:image/svg+xml,%3Csvg width='900' height='900' viewBox='0 0 900 900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='450' cy='450' r='449.5' stroke='%23B2B2B2' stroke-opacity='0.15'/%3E%3Ccircle cx='450.5' cy='450.5' r='331' stroke='%23B2B2B2' stroke-opacity='0.23'/%3E%3Cg clip-path='url(%23clip0)'%3E%3Cg filter='url(%23filter0_d)'%3E%3Cpath d='M480.04 434.141C474.524 423.743 463.101 415.059 447.037 416.363C442.192 416.755 437.366 418.171 433.713 420.165C429.967 422.215 426.799 424.991 424.414 427.787C419.345 433.694 415.339 441.763 416.382 453.168C417.706 467.554 426.762 477.449 438.372 481.717C453.205 487.158 467.853 481.083 475.381 472.418C480.599 466.399 484.699 457.957 483.842 447.037C483.487 442.471 482.015 437.868 480.04 434.141ZM597.851 444.297C596.193 409.543 584.602 383.118 569.078 362.228C553.22 340.873 533.392 324.399 506.893 313.367C489.544 306.155 467.908 301.012 444.074 302.149C432.427 302.708 421.805 304.329 411.705 307.013C382.075 314.914 360.216 330.008 342.14 348.476C335.916 354.849 330.791 361.8 325.853 369.198C321.25 376.112 316.927 384.609 313.163 393.517C306.1 410.214 301.031 431.961 302.168 456.112C303.826 491.034 315.417 517.142 330.94 538.181C336.14 545.244 342.252 551.412 348.495 557.636C360.57 569.712 375.832 579.514 393.331 586.819C410.792 594.105 432.26 598.931 455.926 597.813C501.545 595.652 533.094 576.812 557.655 551.71C563.6 545.654 568.967 538.516 573.942 530.988C578.806 523.627 583.316 515.465 586.838 506.874C593.975 489.506 599.006 468.504 597.851 444.297ZM563.152 497.37C556.966 511.999 548.71 524.112 538.834 534.379C519.043 554.99 492.637 570.625 454.435 572.451C434.719 573.383 417.351 569.227 402.835 563.152C388.243 557.04 375.87 548.915 365.602 539.038C345.103 519.285 329.338 492.935 327.53 454.64C326.617 435.185 330.68 417.016 336.624 402.816C342.848 387.982 350.563 376.615 360.943 365.806C375.609 350.526 394.188 337.686 418.47 331.331C426.781 329.151 435.837 327.996 445.546 327.53C464.722 326.617 483.45 330.903 497.576 336.829C512.204 342.978 524.298 351.383 534.585 361.148C545.356 371.378 553.76 382.69 560.395 396.685C566.935 410.493 571.762 426.836 572.656 445.546C573.625 465.579 569.023 483.506 563.152 497.37Z' fill='%235E5E9B'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d' x='298.008' y='301.991' width='304.008' height='303.983' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow' result='shape'/%3E%3C/filter%3E%3CclipPath id='clip0'%3E%3Crect width='296' height='296' fill='white' transform='translate(302 302)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+    .subtitle {
+      margin-bottom: 10px;
+    }
+  }
+
+  &_timer_title {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #0B0B0B;
+    margin-top: 655px;
+    margin-bottom: 60px;
+  }
+}

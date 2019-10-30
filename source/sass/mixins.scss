@@ -1,0 +1,65 @@
+@mixin font_Ubuntu {
+  font-family: Ubuntu, Arial, sans-serif;
+}
+
+@mixin bgi {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin title {
+  @include font_Ubuntu;
+  position: relative;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 41px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #0B0B0B;
+  margin: 0;
+}
+
+@mixin title_line {
+  content: '';
+  position: absolute;
+  top: -58px;
+  left: 0;
+  width: 85px;
+  height: 4px;
+  background-color: #0B0B0B;
+}
+
+@mixin subtitle {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  color: #222222;
+  margin: 0;
+}
+
+@mixin text {
+  @include font_Ubuntu;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0;
+}
+
+@mixin color_black {
+  color: #000000;
+}
+
+@mixin header_link {
+  color: #555555;
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: none;
+}

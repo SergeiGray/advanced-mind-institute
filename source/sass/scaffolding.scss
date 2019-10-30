@@ -1,0 +1,105 @@
+* {
+  flex-shrink: 0;
+  // outline: 1px solid red;
+}
+
+.display_none {
+  display: none !important;
+}
+
+body {
+  @include font_Ubuntu;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+// /*---WRAPPER---*/
+
+.wrapper {
+  display: flex;
+  box-sizing: border-box;
+  width: 1690px;
+  margin: 0 auto;
+}
+
+// /*---BASE---*/
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &_image {
+    margin-right: 8px;
+  }
+
+  &_text {
+    @include color_black;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
+}
+
+.button_transparent {
+  display: inline-block;
+  min-width: 210px;
+  min-height: 66px;
+  border: 1px solid #131313;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  color: #0B0B0B;
+  text-decoration: none;
+}
+
+.rellax {
+  position: absolute;
+  left: calc(50% - 950px);
+  width: 1041px;
+  height: 2626px;
+  background-image: url('../img/landing_parallax_desktop.png');
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subtitle {
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 40px;
+    text-align: center;
+    color: #0B0B0B;
+    margin: 0;
+  }
+
+  .timer_list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .timer_item {
+    display: flex;
+    align-items: center;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 40px;
+      text-align: center;
+      color: #0B0B0B;
+  }
+}
+
+.main {
+  background-image: url('../img/main_bg_desktop.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}

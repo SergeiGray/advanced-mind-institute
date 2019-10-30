@@ -1,0 +1,30 @@
+.neuromatrix {
+  margin-bottom: 560px;
+
+  .wrapper {
+    justify-content: flex-end;
+  }
+
+  .neuromatrix_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 255px;
+  }
+
+  .neuromatrix_title {
+    @include title;
+    margin-bottom: 43px;
+
+    &::after {
+      @include title_line;
+    }
+  }
+
+  .neuromatrix_text {
+    @include text;
+    width: 530px;
+    margin-bottom: 47px;
+  }
+}
