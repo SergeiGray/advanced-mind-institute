@@ -28,6 +28,8 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  margin-top: 10px;
 
   &_image {
     margin-right: 8px;
@@ -35,10 +37,11 @@ body {
 
   &_text {
     @include color_black;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 15px;
     line-height: 17px;
     text-transform: uppercase;
+    margin: 0;
   }
 }
 
@@ -58,12 +61,31 @@ body {
   text-decoration: none;
 }
 
-.rellax {
+// .rellax {
+//   position: absolute;
+//   left: calc(50% - 950px);
+//   width: 1041px;
+//   height: 2626px;
+//   background-image: url('../img/landing_parallax_desktop.png');
+// }
+
+.parallax_first_container {
+  @include bgi;
   position: absolute;
   left: calc(50% - 950px);
   width: 1041px;
-  height: 2626px;
-  background-image: url('../img/landing_parallax_desktop.png');
+  height: 1124px;
+  background-image: url('../img/parallax_first_container.png');
+}
+
+.parallax_second_container {
+  @include bgi;
+  position: absolute;
+  top: 1325px;
+  left: calc(50% - 627px);
+  width: 562px;
+  height: 2131px;
+  background-image: url('../img/parallax_second_container.png');
 }
 
 .timer {
@@ -98,7 +120,37 @@ body {
   }
 }
 
-.main {
+.breadcrumbs {
+  display: flex;
+  margin-bottom: 50px;
+
+  &_link {
+    position: relative;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #555555;
+
+    &:not(:last-child) {
+      margin-right: 65px;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: -33px;
+        content: '•';
+        color: #555555;
+        cursor: auto;
+      }
+    }
+  }
+}
+
+
+
+.main.index {
   background-image: url('../img/main_bg_desktop.png');
   background-repeat: no-repeat;
   background-position: bottom left;

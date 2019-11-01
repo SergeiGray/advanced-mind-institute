@@ -27,7 +27,6 @@
     .flex-viewport {
       width: 84vw;
       max-width: 1750px;
-      // max-width: 2160px;
     }
 
     &_container {
@@ -46,18 +45,21 @@
     }
 
     &_title {
-      display: none;
+      display: flex;
+      opacity: 0;
       align-self: flex-start;
       font-weight: 500;
-      font-size: 26px;
-      line-height: 30px;
+      font-size: 0px;
+      line-height: 0px;
       margin: 0;
+      transition: 0.5s;
     }
 
     &_image {
       width: 445px;
       height: 280px;
       margin-bottom: 35px;
+      transition: 0.5s;
     }
 
     .online_slider_m_first {
@@ -79,6 +81,9 @@
 
       .online_slider_title {
         display: flex;
+        opacity: 1;
+        font-size: 26px;
+        line-height: 30px;
       }
     }
 

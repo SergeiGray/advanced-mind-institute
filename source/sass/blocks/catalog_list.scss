@@ -1,0 +1,37 @@
+.catalog_list {
+
+  &_header {
+    @include bgi;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 490px;
+    padding-top: 170px;
+    background-image: url('../img/catalog_list_banner_desktop.png');
+  }
+
+  &_title {
+    @include title;
+    display: flex;
+    flex-direction: column;
+    line-height: 160%;
+
+    &::after {
+      @include title_line;
+      top: 60px;
+      left: -119px;
+      transform: rotate(90deg);
+    }
+
+    .subtitle {
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.33em;
+      text-transform: uppercase;
+      color: #483B3A;
+      margin-bottom: 25px;
+    }
+  }
+}

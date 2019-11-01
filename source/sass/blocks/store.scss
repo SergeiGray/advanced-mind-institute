@@ -122,13 +122,32 @@
 
     .store_active_item {
 
-      .store_slider_content,
       .store_slider_title {
         display: flex;
+
+        &.bottom {
+          margin-bottom: 10px;
+        }
       }
 
       .store_slider_image {
-        display: none;
+        width: 810px;
+        height: 505px;
+        margin-bottom: 25px;
+      }
+
+      &:hover {
+        .store_slider_image {
+          display: none;
+        }
+
+        .store_slider_title.bottom {
+          visibility: hidden;
+        }
+
+        .store_slider_content {
+          display: flex;
+        }
       }
     }
 

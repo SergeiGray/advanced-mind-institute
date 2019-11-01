@@ -76,6 +76,12 @@
 
     &_text {
       @include text;
+      box-sizing: border-box;
+      display: flex;
+      width: 485px;
+      height: 150px;
+      padding-right: 5px;
+      overflow-y: auto;
       margin-bottom: 20px;
     }
 
