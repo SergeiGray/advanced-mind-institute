@@ -45,7 +45,6 @@
 
     .flex-viewport {
       min-width: 100%;
-      width: 44.5vw;
       max-width: 940px;
     }
 
@@ -54,6 +53,7 @@
     }
 
     &_item {
+      display: flex !important;
       width: 140px;
       margin-right: 60px;
       flex-direction: column;

@@ -12,6 +12,11 @@
     margin-left: 80px;
     margin-bottom: 85px;
 
+    &.revealator-partially-below {
+      transform: skew(0deg, 0deg);
+      opacity: 1;
+    }
+
     &::after {
       @include title_line;
       top: 60px;
@@ -27,6 +32,11 @@
     height: 395px;
     background-image: url('../img/radio_container_bg_desktop.png');
     margin-top: 175px;
+
+    &.revealator-partially-below {
+      transform: skew(0deg, 0deg);
+      opacity: 1;
+    }
   }
 
   &_sticker {

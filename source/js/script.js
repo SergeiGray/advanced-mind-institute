@@ -24,6 +24,9 @@
         animationSpeed: 900,
         keyboard: false,
         before: function(slider) {
+          console.log('Before' + '   ' + slider.currentSlide + ' ' + slider);
+          console.log(slider);
+          slider.limit = 1200;
           slider.last = slider.count - 4;
         }
       });
@@ -52,10 +55,10 @@
           $(slider.slides[slider.currentSlide]).find('.feedback_slider_text').niceScroll({
             cursorborder: "none",
             cursoropacitymin: "1",
-            cursorwidth: "4px",
+            cursorwidth: "3px",
             scrollspeed: "30",
             mousescrollstep: "10",
-            background: "#b1b1b1",
+            background: "#E1E1E1",
             cursorminheight: "97"
           });
         },
@@ -68,10 +71,10 @@
           $(slider.slides[slider.currentSlide]).find('.feedback_slider_text').niceScroll({
             cursorborder: "none",
             cursoropacitymin: "1",
-            cursorwidth: "4px",
+            cursorwidth: "3px",
             scrollspeed: "30",
             mousescrollstep: "10",
-            background: "#b1b1b1",
+            background: "#E1E1E1",
             cursorminheight: "97"
           });
         }
@@ -173,11 +176,12 @@
     $(document).ready(function() {
       $('body').niceScroll({
         cursorborder: "none",
-        scrollspeed: "15",
-        mousescrollstep: "10",
+        scrollspeed: "30",
+        mousescrollstep: "20",
         horizrailenabled: false
       });
       $('window').trigger('scroll');
+      $('body').trigger('scroll');
     });
   };
 

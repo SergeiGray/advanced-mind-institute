@@ -2,15 +2,8 @@
   margin-bottom: 405px;
 
   .wrapper {
-    position: relative;
-  }
-
-  &_bg {
     @include bgi;
-    position: absolute;
-    top: 390px;
-    left: 0;
-    width: 100%;
+    position: relative;
     height: 915px;
     background-image: url('../img/statistics_bg_desktop.png');
   }
@@ -19,11 +12,11 @@
     @include bgi;
     z-index: -1;
     position: absolute;
-    top: -380px;
+    top: -385px;
     right: 0;
     display: flex;
     width: 90px;
-    height: 1985px;
+    height: 2000px;
     background-image: url("data:image/svg+xml,%3Csvg width='81' height='1985' viewBox='0 0 81 1985' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='0.5' y1='1985' x2='0.499913' y2='2.18556e-08' stroke='%23B2B2B2' stroke-opacity='0.13'/%3E%3Cline x1='0.5' y1='1985' x2='0.499913' y2='2.18556e-08' stroke='%23B2B2B2' stroke-opacity='0.13'/%3E%3Cline x1='80.5' y1='1985' x2='80.4999' y2='2.18556e-08' stroke='%23B2B2B2' stroke-opacity='0.13'/%3E%3Cline x1='80.5' y1='1985' x2='80.4999' y2='2.18556e-08' stroke='%23B2B2B2' stroke-opacity='0.13'/%3E%3C/svg%3E%0A");
     background-position: center right;
   }
@@ -37,10 +30,16 @@
     padding-top: 360px;
     justify-content: center;
     align-items: flex-start;
+
+    &.revealator-partially-below {
+      transform: skew(0deg, 0deg);
+      opacity: 1;
+    }
   }
 
   &_list {
     @include list;
+    position: relative;
     width: 890px;
     justify-content: space-between;
     flex-wrap: wrap;

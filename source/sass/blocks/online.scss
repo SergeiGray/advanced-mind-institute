@@ -26,6 +26,11 @@
     line-height: 160%;
     margin-bottom: 85px;
 
+    &.revealator-partially-below {
+      transform: skew(0deg, 0deg);
+      opacity: 1;
+    }
+
     &::after {
       @include title_line;
     }
@@ -34,6 +39,11 @@
   &_slider {
     position: relative;
     margin-bottom: 130px;
+
+    &.revealator-partially-below {
+      transform: skew(0deg, 0deg);
+      opacity: 1;
+    }
 
     .flex-viewport {
       width: 85vw;
@@ -113,6 +123,11 @@
       bottom: 105px;
       right: 110px;
       width: 400px;
+
+      &.revealator-partially-below {
+        transform: skew(0deg, 0deg);
+        opacity: 1;
+      }
 
       &_link {
         margin-left: 90px;

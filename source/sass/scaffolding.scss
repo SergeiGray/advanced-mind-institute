@@ -56,11 +56,11 @@ body {
   min-height: 66px;
   border: 1px solid #131313;
   box-sizing: border-box;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  // padding-top: 12px;
+  // padding-bottom: 12px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 66px;
   text-align: center;
   color: #0B0B0B;
   text-decoration: none;
@@ -74,7 +74,11 @@ body {
   }
 }
 
-.parallax_first_container {
+.parallax_container {
+  position: relative;
+}
+
+.parallax_first_item {
   @include bgi;
   position: absolute;
   left: calc(50% - 1015px);
@@ -83,10 +87,10 @@ body {
   background-image: url('../img/parallax_first_container_desktop@x1.png');
 }
 
-.parallax_second_container {
+.parallax_second_item {
   @include bgi;
   position: absolute;
-  top: 200px;
+  top: 340px;
   left: calc(50% - 533px);
   width: 469px;
   height: 573px;
