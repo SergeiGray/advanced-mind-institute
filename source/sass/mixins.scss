@@ -8,6 +8,23 @@
   background-size: cover;
 }
 
+@mixin lhc {
+  color: #5E5EB6;
+}
+
+@mixin lac {
+  color: #6D6DD0;
+}
+
+@mixin lc {
+  &:hover {
+    @include lhc;
+  }
+  &:active {
+    @include lac;
+  }
+}
+
 @mixin list {
   display: flex;
   margin: 0;

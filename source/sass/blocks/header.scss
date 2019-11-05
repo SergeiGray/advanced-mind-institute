@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 1;
   margin-bottom: 45px;
 
   .wrapper {
@@ -23,10 +25,10 @@
 
     &_link {
       @include header_link;
+      @include lc;
 
       &:hover {
         position: relative;
-        color: #5E5EB6;
 
         &::after {
           position: absolute;
@@ -41,7 +43,9 @@
     }
 
     &_container {
-      display: none;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 
@@ -77,11 +81,13 @@
 
       .header_navigation_link {
         @include header_link;
+        @include lc;
         box-sizing: border-box;
         display: flex;
         width: 100%;
         padding-left: 25px;
         line-height: 50px;
+        transition: .5s;
 
         &::after {
           display: none;
@@ -116,13 +122,23 @@
 
       .header_navigation_container {
         position: absolute;
-        top: -35px;
         left: 175px;
         box-sizing: border-box;
-        width: 945px;
-        padding: 50px 80px 65px 60px;
         background-color: #FFFFFF;
         box-shadow: 13px 13px 60px rgba(0, 0, 0, 0.08);
+        transition: .5s;
+
+        &.header_navigation_program {
+          top: -35px;
+          width: 895px;
+          padding: 50px 80px 65px 40px;
+        }
+
+        &.header_navigation_support {
+          top: 0;
+          width: 235px;
+          padding: 17px 45px 0px 40px;
+        }
 
         &_item {
           margin-bottom: 30px;
@@ -133,11 +149,12 @@
           flex-direction: column;
 
           &:not(:last-child) {
-            margin-right: 85px;
+            margin-right: 80px;
           }
         }
 
         &_link {
+          @include lc;
           position: relative;
           text-decoration: none;
           font-weight: 300;
@@ -153,12 +170,11 @@
           }
 
           &:hover {
-            color: #5E5EB6;
 
             &::after {
               position: absolute;
               top: -50%;
-              left: -61px;
+              left: -40px;
               content: '';
               width: 2px;
               height: 41px;
@@ -185,7 +201,8 @@
       }
 
       .header_navigation_drop_down:hover + .header_navigation_container {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
       }
 
       .header_navigation_container:hover ~ .header_navigation_link {
@@ -193,7 +210,8 @@
       }
 
       .header_navigation_container:hover {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
@@ -212,16 +230,20 @@
       width: 61px;
       flex-direction: column;
       background: #FFFFFF;
+      outline: 1px solid rgba(240, 240, 240, 0);
+      transition: .5s;
     }
 
     &_link {
       @include header_link;
+      @include lc;
       display: flex;
       box-sizing: border-box;
       padding-left: 15px;
       width: 100%;
       line-height: 27px;
       text-align: center;
+      transition: .5s;
 
       &:hover {
         background-color: #5E5EB6;
@@ -230,10 +252,16 @@
     }
 
     &_item {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      transition: 1s;
 
       &:first-child {
         display: flex;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
 
         .header_language_link {
           position: relative;
@@ -241,7 +269,6 @@
           &:hover {
             background-color: #ffffff;
             color: #555555;
-            cursor: default;
           }
 
           &::after {
@@ -263,11 +290,14 @@
       margin-bottom: -67px;
 
       .header_language_list {
-        outline: 1px solid #F0F0F0;
+        outline: 1px solid rgba(240, 240, 240, 1);
       }
 
       .header_language_item {
         display: flex;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
 
         &:first-child {
 
@@ -284,6 +314,7 @@
 
   &_login {
     @include header_link;
+    @include lc;
     align-items: center;
     margin-right: 88px;
     margin-top: 10px;
@@ -326,6 +357,17 @@
           line-height: 13px;
           text-align: center;
           color: #FFFFFF;
+        }
+      }
+
+      .icon {
+        fill: #777777;
+      }
+
+      &:hover,
+      &:active {
+        .icon {
+          fill: #5E5EB6;
         }
       }
     }

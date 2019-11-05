@@ -7,9 +7,10 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/flexslider.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/fm.revealator.jquery.min.css">
 </head>
 <body>
-  <header class="header index">
+  <header class="header index revealator-load revealator-slidedown revealator-duration15">
     <div class="wrapper">
       <a href="index.html" class="logo">
         <img class="logo_image" src="img/logo.png" alt="Логотип" width="43" height="43">
@@ -19,7 +20,7 @@
         <ul class="header_navigation_list">
           <li class="header_navigation_item">
             <a href="" class="header_navigation_link header_navigation_drop_down">Программы</a>
-            <div class="header_navigation_container">
+            <div class="header_navigation_container header_navigation_program">
               <ul class="header_navigation_container_list">
                 <li class="header_navigation_container_item">
                   <a href="" class="header_navigation_container_link fw500">Магазин программ</a>
@@ -132,7 +133,16 @@
           </li>
           <li class="header_navigation_item">
             <a href="" class="header_navigation_link header_navigation_drop_down">Поддержка</a>
-            <div class="header_navigation_container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae iste et alias adipisci minima nostrum perferendis, quo aperiam porro temporibus consequatur aspernatur nesciunt veniam assumenda architecto! Quae quia ab aliquam, deleniti repellendus? Cum corporis nemo rem eaque aspernatur quae, sapiente voluptatem sit porro a. Ratione laboriosam, possimus ex inventore, tempore delectus harum, libero id culpa saepe quibusdam esse tenetur. Neque exercitationem quam ducimus excepturi ab, adipisci, molestias saepe corrupti odio magni accusantium, doloremque, ad dolor asperiores laboriosam reprehenderit dicta distinctio error velit nesciunt sed possimus laborum. Ea debitis illum, rem. Enim officiis, reprehenderit placeat, unde accusamus nobis sunt assumenda possimus ducimus repellendus. Quis amet excepturi maxime qui architecto? Officiis harum, doloribus reiciendis exercitationem quis numquam possimus ab a architecto. Est repellat commodi dolorum perferendis odit sunt deserunt fuga fugiat ea quasi! Recusandae dolores ipsam aperiam accusantium facere adipisci iusto dolorum est fuga illo, pariatur sequi repellendus facilis explicabo quo animi suscipit alias quisquam deserunt architecto ea, ipsum nesciunt obcaecati reiciendis. Non quos soluta veniam magnam tempora aut iusto. Error, dicta.</div>
+            <div class="header_navigation_container header_navigation_support">
+              <ul class="header_navigation_container_list">
+                <li class="header_navigation_container_item">
+                  <a href="" class="header_navigation_container_link fw400">FAQ</a>
+                </li>
+                <li class="header_navigation_container_item">
+                  <a href="" class="header_navigation_container_link fw400">Служба поддержки</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="header_navigation_item">
             <a href="" class="header_navigation_link">Контакты</a>
@@ -155,21 +165,21 @@
       <a href="" class="header_login">Авторизация</a>
       <ul class="header_menu_list">
         <li class="header_menu_item">
-          <a href="" class="header_menu_link">
+          <a href="" class="header_menu_link" title="Мои желания">
             <svg class="icon" width="25" height="25">
               <use xlink:href="img/sprite.svg#icon-heart"></use>
             </svg>
           </a>
         </li>
         <li class="header_menu_item">
-          <a href="" class="header_menu_link">
+          <a href="" class="header_menu_link" title="Поиск">
             <svg class="icon" width="23" height="22">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
           </a>
         </li>
         <li class="header_menu_item">
-          <a href="" class="header_menu_link basket">
+          <a href="" class="header_menu_link basket" title="Корзина">
             <span class="header_menu_basket_counter">23</span>
             <svg class="icon" width="23" height="23">
               <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
@@ -180,9 +190,8 @@
     </div>
   </header>
   <main class="main index">
-    <div class="parallax_first_container" data-rellax-speed="7"></div>
-    <div class="parallax_second_container" data-rellax-speed="7"></div>
-    <section class="landing">
+    <div class="parallax parallax_first_container" data-rellax-speed="7"></div>
+    <section class="landing revealator-load revealator-slideleft revealator-duration15">
       <div class="wrapper">
         <div class="landing_container">
           <h1 class="landing_title">Медитативные<br>программы</h1>
@@ -229,27 +238,16 @@
                 <p class="landing_slider_number">10</p>
                 <p class="landing_slider_text">Обрести внутренний покой</p>
               </li>
-              <li class="landing_slider_item">
-              </li>
-              <li class="landing_slider_item">
-              </li>
-              <li class="landing_slider_item">
-              </li>
-              <li class="landing_slider_item">
-              </li>
-              <li class="landing_slider_item">
-              </li>
-              <li class="landing_slider_item">
-              </li>
             </ul>
           </div>
-          <a href="" class="landing_scroll_down">Листайте вниз</a>
+          <p class="landing_scroll_down">Листайте вниз</p>
         </div>
       </div>
     </section>
     <section class="neuromatrix">
+          <div class="parallax parallax_second_container" data-rellax-speed="5"></div>
        <div class="wrapper">
-         <div class="neuromatrix_container">
+         <div class="neuromatrix_container revealator-slideleft revealator-once">
            <h2 class="neuromatrix_title">Neuromatrix Pro</h2>
            <p class="neuromatrix_text">Нейроматрица Pro – это система онлайн-медитаций, целью которой является развитие и совершенствование сознания, улучшение физического состояния, основанная на циркадных ритмах.</p>
            <a href="" class="neuromatrix_link button_transparent">Перейти к курсу</a>
@@ -258,8 +256,8 @@
     </section>
     <section class="feedback">
       <div class="wrapper">
-        <h2 class="feedback_title">Отзывы пользователей</h2>
-        <div class="feedback_slider">
+        <h2 class="feedback_title revealator-slideright revealator-once">Отзывы пользователей</h2>
+        <div class="feedback_slider revealator-slideleft revealator-once">
           <ul class="feedback_slider_container">
             <li class="feedback_slider_item">
               <div class="feedback_slider_review first_item">
@@ -304,7 +302,33 @@
                 <img src="img/program_cards/epsilon_sync.png" alt="Снятие психосоматических блоков" class="feedback_slider_image" width="420" height="263">
                 <div class="feedback_slider_content">
                   <h3 class="feedback_slider_title">Снятие психосоматических блоков</h3>
-                  <p class="feedback_slider_text">Энергетическое программирование в этой нейроакустической программе увеличивает мое понимание себя в настоящее время. Это повысило мое понимание идей, которые помогут мне отвлечься от негативных моделей мышления и принимать лучшие решения в жизни. Это помогло мне обрести больший</p>
+                  <p class="feedback_slider_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fugiat accusantium velit et obcaecati voluptas minus qui expedita, beatae unde, sed recusandae laboriosam rem voluptatibus veniam dicta. Dolores cumque voluptatibus recusandae dolore, hic quos eos labore architecto! Reprehenderit dicta, officia accusantium quibusdam? Ducimus id nostrum quod quibusdam nulla quae mollitia assumenda at hic nam officiis, natus, minus deserunt laudantium veritatis quo debitis corporis eius explicabo labore et sint autem ea facilis itaque! Deserunt, vel obcaecati commodi fugiat est aut officia eaque vitae doloremque at fuga cupiditate, iste eligendi incidunt a ab sequi laborum veniam in? Quas nesciunt, mollitia corrupti perspiciatis!</p>
+                  <div class="feedback_slider_footer feedback_slider_text">
+                    <span class="feedback_slider_name">Alexander K</span>
+                    <span class="feedback_slider_separator"></span>
+                    <span class="feedback_slider_date">01.09.2019, 07:33</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="feedback_slider_item">
+              <div class="feedback_slider_review first_item">
+                <img src="img/program_cards/remotionem_psychosomatic_cuneos.png" alt="Биорезонанс частот вознесения" class="feedback_slider_image"  width="420" height="263">
+                <div class="feedback_slider_content">
+                  <h3 class="feedback_slider_title">Биорезонанс частот вознесения</h3>
+                  <p class="feedback_slider_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fugiat accusantium velit et obcaecati voluptas minus qui expedita, beatae unde, sed recusandae laboriosam rem voluptatibus veniam dicta. Dolores cumque voluptatibus recusandae dolore, hic quos eos labore architecto! Reprehenderit dicta, officia accusantium quibusdam? Ducimus id nostrum quod quibusdam nulla quae mollitia assumenda at hic nam officiis, natus, minus deserunt laudantium veritatis quo debitis corporis eius explicabo labore et sint autem ea facilis itaque! Deserunt, vel obcaecati commodi fugiat est aut officia eaque vitae doloremque at fuga cupiditate, iste eligendi incidunt a ab sequi laborum veniam in? Quas nesciunt, mollitia corrupti perspiciatis!</p>
+                  <div class="feedback_slider_footer">
+                    <span class="feedback_slider_name">Alexander K</span>
+                    <span class="feedback_slider_separator"></span>
+                    <span class="feedback_slider_date">01.09.2019, 07:33</span>
+                  </div>
+                </div>
+              </div>
+              <div class="feedback_slider_review second_item">
+                <img src="img/program_cards/epsilon_sync.png" alt="Снятие психосоматических блоков" class="feedback_slider_image" width="420" height="263">
+                <div class="feedback_slider_content">
+                  <h3 class="feedback_slider_title">Снятие психосоматических блоков</h3>
+                  <p class="feedback_slider_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fugiat accusantium velit et obcaecati voluptas minus qui expedita, beatae unde, sed recusandae laboriosam rem voluptatibus veniam dicta. Dolores cumque voluptatibus recusandae dolore, hic quos eos labore architecto! Reprehenderit dicta, officia accusantium quibusdam? Ducimus id nostrum quod quibusdam nulla quae mollitia assumenda at hic nam officiis, natus, minus deserunt laudantium veritatis quo debitis corporis eius explicabo labore et sint autem ea facilis itaque! Deserunt, vel obcaecati commodi fugiat est aut officia eaque vitae doloremque at fuga cupiditate, iste eligendi incidunt a ab sequi laborum veniam in? Quas nesciunt, mollitia corrupti perspiciatis!</p>
                   <div class="feedback_slider_footer feedback_slider_text">
                     <span class="feedback_slider_name">Alexander K</span>
                     <span class="feedback_slider_separator"></span>
@@ -314,19 +338,11 @@
               </div>
             </li>
           </ul>
-          <div class="feedback_flipping">
-            <ul class="flex-direction-nav">
-              <li>
-                <a class="flex-prev" href="#">Пред.</a>
-              </li>
-              <li>
-                <a class="flex-next" href="#">След.</a>
-              </li>
-            </ul>
+          <div class="feedback_flipping revealator-slideup revealator-once">
             <p class="feedback_slider_item_number">
               <span class="feedback_slider_item_index">1</span>
               /
-              <span class="feedback_slider_item_total">2</span>
+              <span class="feedback_slider_item_total"></span>
             </p>
             <a href="" class="feedback_flipping_link">Смотреть все отзывы</a>
           </div>
@@ -335,6 +351,7 @@
     </section>
     <section class="statistics">
       <div class="wrapper">
+        <div class="statistics_bg parallax revealator-slideup revealator-once" data-rellax-speed="2"></div>
         <div class="statistics_bg_line"></div>
         <div class="statistics_container">
           <ul class="statistics_list">
@@ -359,347 +376,353 @@
               <p class="statistics_name">пользователей</p>
             </li>
           </ul>
-          <a href="" class="statistics_scroll_down"></a>
+          <p class="statistics_scroll_down"></p>
         </div>
       </div>
     </section>
     <section class="store">
       <div class="wrapper">
-        <h2 class="store_title">Магазин программ</h2>
+        <h2 class="store_title revealator-slideright revealator-once">Магазин программ</h2>
+      </div>
+      <div class="store_slider revealator-slideleft revealator-once">
+        <ul class="store_slider_container">
+          <li class="store_slider_item">
+            <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
+            <div class="store_slider_overlay">
+              <button class="store_slider_overlay_button">Краткое описание программы</button>
+            </div>
+            <div class="store_slider_content">
+              <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
+              <div class="store_slider_rating">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <p class="store_rating_number">
+                  <span class="store_rating_index">4.84</span>
+                  /
+                  <span class="store_rating_total">14</span>
+                </p>
+              </div>
+              <h4 class="store_slider_subtitle">Краткое описание программы</h4>
+              <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
+              <h4 class="store_slider_subtitle">Частоты</h4>
+              <div class="store_slider_footer">
+                <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
+                <a href="" class="button_transparent">Перейти к программе</a>
+              </div>
+            </div>
+            <a href="" class="store_slider_link">Снятие психосоматических блоков</a>
+          </li>
+          <li class="store_slider_item">
+            <img class="store_slider_image" src="img/program_cards/remotionem_psychosomatic_cuneos.png" alt="Remotionem psychosomatic cuneos" width="550" height="345">
+            <div class="store_slider_overlay">
+              <button class="store_slider_overlay_button">Краткое описание программы</button>
+            </div>
+            <div class="store_slider_content">
+              <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
+              <div class="store_slider_rating">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <p class="store_rating_number">
+                  <span class="store_rating_index">4.84</span>
+                  /
+                  <span class="store_rating_total">14</span>
+                </p>
+              </div>
+              <h4 class="store_slider_subtitle">Краткое описание программы</h4>
+              <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
+              <h4 class="store_slider_subtitle">Частоты</h4>
+              <div class="store_slider_footer">
+                <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
+                <a href="" class="button_transparent">Перейти к программе</a>
+              </div>
+            </div>
+            <a href="" class="store_slider_link">Снятие психосоматических блоков</a>
+          </li>
+          <li class="store_slider_item">
+            <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
+            <div class="store_slider_overlay">
+              <button class="store_slider_overlay_button">Краткое описание программы</button>
+            </div>
+            <div class="store_slider_content">
+              <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
+              <div class="store_slider_rating">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <p class="store_rating_number">
+                  <span class="store_rating_index">4.84</span>
+                  /
+                  <span class="store_rating_total">14</span>
+                </p>
+              </div>
+              <h4 class="store_slider_subtitle">Краткое описание программы</h4>
+              <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
+              <h4 class="store_slider_subtitle">Частоты</h4>
+              <div class="store_slider_footer">
+                <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
+                <a href="" class="button_transparent">Перейти к программе</a>
+              </div>
+            </div>
+            <a href="" class="store_slider_link">Снятие психосоматических блоков</a>
+          </li>
+          <li class="store_slider_item">
+            <img class="store_slider_image" src="img/program_cards/remotionem_psychosomatic_cuneos.png" alt="Remotionem psychosomatic cuneos" width="550" height="345">
+            <div class="store_slider_overlay">
+              <button class="store_slider_overlay_button">Краткое описание программы</button>
+            </div>
+            <div class="store_slider_content">
+              <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
+              <div class="store_slider_rating">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <p class="store_rating_number">
+                  <span class="store_rating_index">4.84</span>
+                  /
+                  <span class="store_rating_total">14</span>
+                </p>
+              </div>
+              <h4 class="store_slider_subtitle">Краткое описание программы</h4>
+              <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
+              <h4 class="store_slider_subtitle">Частоты</h4>
+              <div class="store_slider_footer">
+                <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
+                <a href="" class="button_transparent">Перейти к программе</a>
+              </div>
+            </div>
+            <a href="" class="store_slider_link">Снятие психосоматических блоков</a>
+          </li>
+          <li class="store_slider_item">
+            <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
+            <div class="store_slider_overlay">
+              <button class="store_slider_overlay_button">Краткое описание программы</button>
+            </div>
+            <div class="store_slider_content">
+              <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
+              <div class="store_slider_rating">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <p class="store_rating_number">
+                  <span class="store_rating_index">4.84</span>
+                  /
+                  <span class="store_rating_total">14</span>
+                </p>
+              </div>
+              <h4 class="store_slider_subtitle">Краткое описание программы</h4>
+              <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
+              <h4 class="store_slider_subtitle">Частоты</h4>
+              <div class="store_slider_footer">
+                <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
+                <a href="" class="button_transparent">Перейти к программе</a>
+              </div>
+            </div>
+            <a href="" class="store_slider_link">Снятие психосоматических блоков</a>
+          </li>
+          <li class="store_slider_item">
+            <img class="store_slider_image" src="img/program_cards/remotionem_psychosomatic_cuneos.png" alt="Remotionem psychosomatic cuneos" width="550" height="345">
+            <div class="store_slider_overlay">
+              <button class="store_slider_overlay_button">Краткое описание программы</button>
+            </div>
+            <div class="store_slider_content">
+              <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
+              <div class="store_slider_rating">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <p class="store_rating_number">
+                  <span class="store_rating_index">4.84</span>
+                  /
+                  <span class="store_rating_total">14</span>
+                </p>
+              </div>
+              <h4 class="store_slider_subtitle">Краткое описание программы</h4>
+              <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
+              <h4 class="store_slider_subtitle">Частоты</h4>
+              <div class="store_slider_footer">
+                <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
+                <a href="" class="button_transparent">Перейти к программе</a>
+              </div>
+            </div>
+            <a href="" class="store_slider_link">Снятие психосоматических блоков</a>
+          </li>
+          <li class="store_slider_item">
+            <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
+            <div class="store_slider_overlay">
+              <button class="store_slider_overlay_button">Краткое описание программы</button>
+            </div>
+            <div class="store_slider_content">
+              <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
+              <div class="store_slider_rating">
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <svg class="icon" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+                <p class="store_rating_number">
+                  <span class="store_rating_index">4.84</span>
+                  /
+                  <span class="store_rating_total">14</span>
+                </p>
+              </div>
+              <h4 class="store_slider_subtitle">Краткое описание программы</h4>
+              <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
+              <h4 class="store_slider_subtitle">Частоты</h4>
+              <div class="store_slider_footer">
+                <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
+                <a href="" class="button_transparent">Перейти к программе</a>
+              </div>
+            </div>
+            <a href="" class="store_slider_link">Снятие психосоматических блоков</a>
+          </li>
+        </ul>
+        <div class="store_flipping revealator-slideup revealator-once">
+          <p class="store_slider_item_number">
+            <span class="store_slider_item_index">2</span>
+            /
+            <span class="store_slider_item_total"></span>
+          </p>
         </div>
-        <div class="store_slider">
-          <ul class="store_slider_container">
-            <li class="store_slider_item">
-              <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
-              <div class="store_slider_content">
-                <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
-                <div class="store_slider_rating">
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <p class="store_rating_number">
-                    <span class="store_rating_index">4.84</span>
-                    /
-                    <span class="store_rating_total">14</span>
-                  </p>
-                </div>
-                <h4 class="store_slider_subtitle">Краткое описание программы</h4>
-                <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
-                <h4 class="store_slider_subtitle">Частоты</h4>
-                <div class="store_slider_footer">
-                  <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
-                  <a href="" class="button_transparent">Перейти к программе</a>
-                </div>
-              </div>
-              <h3 class="store_slider_title bottom">Снятие психосоматических блоков</h3>
-            </li>
-            <li class="store_slider_item">
-              <img class="store_slider_image" src="img/program_cards/remotionem_psychosomatic_cuneos.png" alt="Remotionem psychosomatic cuneos" width="550" height="345">
-              <div class="store_slider_content">
-                <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
-                <div class="store_slider_rating">
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <p class="store_rating_number">
-                    <span class="store_rating_index">4.84</span>
-                    /
-                    <span class="store_rating_total">14</span>
-                  </p>
-                </div>
-                <h4 class="store_slider_subtitle">Краткое описание программы</h4>
-                <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
-                <h4 class="store_slider_subtitle">Частоты</h4>
-                <div class="store_slider_footer">
-                  <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
-                  <a href="" class="button_transparent">Перейти к программе</a>
-                </div>
-              </div>
-              <h3 class="store_slider_title bottom">Снятие психосоматических блоков</h3>
-            </li>
-            <li class="store_slider_item">
-              <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
-              <div class="store_slider_content">
-                <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
-                <div class="store_slider_rating">
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <p class="store_rating_number">
-                    <span class="store_rating_index">4.84</span>
-                    /
-                    <span class="store_rating_total">14</span>
-                  </p>
-                </div>
-                <h4 class="store_slider_subtitle">Краткое описание программы</h4>
-                <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
-                <h4 class="store_slider_subtitle">Частоты</h4>
-                <div class="store_slider_footer">
-                  <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
-                  <a href="" class="button_transparent">Перейти к программе</a>
-                </div>
-              </div>
-              <h3 class="store_slider_title bottom">Снятие психосоматических блоков</h3>
-            </li>
-            <li class="store_slider_item">
-              <img class="store_slider_image" src="img/program_cards/remotionem_psychosomatic_cuneos.png" alt="Remotionem psychosomatic cuneos" width="550" height="345">
-              <div class="store_slider_content">
-                <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
-                <div class="store_slider_rating">
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <p class="store_rating_number">
-                    <span class="store_rating_index">4.84</span>
-                    /
-                    <span class="store_rating_total">14</span>
-                  </p>
-                </div>
-                <h4 class="store_slider_subtitle">Краткое описание программы</h4>
-                <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
-                <h4 class="store_slider_subtitle">Частоты</h4>
-                <div class="store_slider_footer">
-                  <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
-                  <a href="" class="button_transparent">Перейти к программе</a>
-                </div>
-              </div>
-              <h3 class="store_slider_title bottom">Снятие психосоматических блоков</h3>
-            </li>
-            <li class="store_slider_item">
-              <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
-              <div class="store_slider_content">
-                <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
-                <div class="store_slider_rating">
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <p class="store_rating_number">
-                    <span class="store_rating_index">4.84</span>
-                    /
-                    <span class="store_rating_total">14</span>
-                  </p>
-                </div>
-                <h4 class="store_slider_subtitle">Краткое описание программы</h4>
-                <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
-                <h4 class="store_slider_subtitle">Частоты</h4>
-                <div class="store_slider_footer">
-                  <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
-                  <a href="" class="button_transparent">Перейти к программе</a>
-                </div>
-              </div>
-              <h3 class="store_slider_title bottom">Снятие психосоматических блоков</h3>
-            </li>
-            <li class="store_slider_item">
-              <img class="store_slider_image" src="img/program_cards/remotionem_psychosomatic_cuneos.png" alt="Remotionem psychosomatic cuneos" width="550" height="345">
-              <div class="store_slider_content">
-                <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
-                <div class="store_slider_rating">
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <p class="store_rating_number">
-                    <span class="store_rating_index">4.84</span>
-                    /
-                    <span class="store_rating_total">14</span>
-                  </p>
-                </div>
-                <h4 class="store_slider_subtitle">Краткое описание программы</h4>
-                <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
-                <h4 class="store_slider_subtitle">Частоты</h4>
-                <div class="store_slider_footer">
-                  <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
-                  <a href="" class="button_transparent">Перейти к программе</a>
-                </div>
-              </div>
-              <h3 class="store_slider_title bottom">Снятие психосоматических блоков</h3>
-            </li>
-            <li class="store_slider_item">
-              <img class="store_slider_image" src="img/program_cards/epsilon_sync.png" alt="Epsilon sync" width="550" height="345">
-              <div class="store_slider_content">
-                <h3 class="store_slider_title">Снятие психосоматических блоков</h3>
-                <div class="store_slider_rating">
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <svg class="icon" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <p class="store_rating_number">
-                    <span class="store_rating_index">4.84</span>
-                    /
-                    <span class="store_rating_total">14</span>
-                  </p>
-                </div>
-                <h4 class="store_slider_subtitle">Краткое описание программы</h4>
-                <p class="store_slider_text">В программе использованы частоты первой и седьмой чакры. Одновременное воспроизведение этих двух частот создает «разницу потенциалов» между первой и седьмой чакрами, которая и гармонизирует основные энергопотоки нашего тела.</p>
-                <h4 class="store_slider_subtitle">Частоты</h4>
-                <div class="store_slider_footer">
-                  <p class="store_slider_text">α (альфа), β (бета), γ (гамма), δ (дельта), ε (эпсилон), θ (тета)</p>
-                  <a href="" class="button_transparent">Перейти к программе</a>
-                </div>
-              </div>
-              <h3 class="store_slider_title bottom">Снятие психосоматических блоков</h3>
-            </li>
-          </ul>
-          <div class="store_flipping">
-            <ul class="flex-direction-nav">
-              <li>
-                <a class="flex-prev" href="#">Пред.</a>
-              </li>
-              <li>
-                <a class="flex-next" href="#">След.</a>
-              </li>
-            </ul>
-            <p class="store_slider_item_number">
-              <span class="store_slider_item_index">2</span>
-              /
-              <span class="store_slider_item_total">6</span>
-            </p>
-          </div>
-        </div>
+      </div>
     </section>
     <section class="online">
       <div class="wrapper">
-        <h2 class="online_title">Бесплатные<br>онлайн-медитации</h2>
-        <div class="online_slider">
+        <div class="online_bg_line"></div>
+        <h2 class="online_title revealator-slideright revealator-once">Бесплатные<br>онлайн-медитации</h2>
+        <div class="online_slider revealator-slideleft revealator-once">
           <ul class="online_slider_container">
             <li class="online_slider_item">
               <a class="online_slider_link" href="">
                 <img class="online_slider_image" src="img/program_cards/frame_203.png" alt="Frame">
               </a>
-              <h3 class="online_slider_title">Снятие психосоматических блоков</h3>
+              <a href="" class="online_slider_title_link">Снятие психосоматических блоков</a>
             </li>
             <li class="online_slider_item">
               <a class="online_slider_link" href="">
                 <img class="online_slider_image" src="img/program_cards/frame_204.png" alt="Frame">
               </a>
-              <h3 class="online_slider_title">Снятие психосоматических блоков</h3>
+              <a href="" class="online_slider_title_link">Снятие психосоматических блоков</a>
             </li>
             <li class="online_slider_item">
               <a class="online_slider_link" href="">
                 <img class="online_slider_image" src="img/program_cards/frame_91.png" alt="Frame">
               </a>
-              <h3 class="online_slider_title">Снятие психосоматических блоков</h3>
+              <a href="" class="online_slider_title_link">Снятие психосоматических блоков</a>
             </li>
             <li class="online_slider_item">
               <a class="online_slider_link" href="">
                 <img class="online_slider_image" src="img/program_cards/frame_203.png" alt="Frame">
               </a>
-              <h3 class="online_slider_title">Снятие психосоматических блоков</h3>
+              <a href="" class="online_slider_title_link">Снятие психосоматических блоков</a>
             </li>
             <li class="online_slider_item">
               <a class="online_slider_link" href="">
                 <img class="online_slider_image" src="img/program_cards/frame_204.png" alt="Frame">
               </a>
-              <h3 class="online_slider_title">Снятие психосоматических блоков</h3>
+              <a href="" class="online_slider_title_link">Снятие психосоматических блоков</a>
             </li>
             <li class="online_slider_item">
               <a class="online_slider_link" href="">
                 <img class="online_slider_image" src="img/program_cards/frame_91.png" alt="Frame">
               </a>
-              <h3 class="online_slider_title">Снятие психосоматических блоков</h3>
+              <a href="" class="online_slider_title_link">Снятие психосоматических блоков</a>
             </li>
             <li class="online_slider_item">
               <a class="online_slider_link" href="">
                 <img class="online_slider_image" src="img/program_cards/frame_203.png" alt="Frame">
               </a>
-              <h3 class="online_slider_title">Снятие психосоматических блоков</h3>
+              <a href="" class="online_slider_title_link">Снятие психосоматических блоков</a>
             </li>
           </ul>
-          <div class="online_flipping">
-            <ul class="flex-direction-nav">
-              <li>
-                <a class="flex-prev" href="#">Пред.</a>
-              </li>
-              <li>
-                <a class="flex-next" href="#">След.</a>
-              </li>
-            </ul>
+          <div class="online_flipping revealator-slideup revealator-once">
             <p class="online_slider_item_number">
-              <span class="online_slider_item_index">2</span>
+              <span class="online_slider_item_index"></span>
               /
-              <span class="online_slider_item_total">6</span>
+              <span class="online_slider_item_total"></span>
             </p>
           </div>
         </div>
@@ -707,15 +730,14 @@
     </section>
     <section class="complex">
       <div class="wrapper">
-        <div class="complex_bg_line"></div>
-        <div class="complex_timer_container">
+        <div class="complex_timer_container revealator-slideright revealator-once">
           <h3 class="complex_timer_title">Час солнца</h3>
           <div class="timer">
             <p class="subtitle">До начала медитации:</p>
             <div class="timer_container" data-timer="2019, 11, 10, 0, 0, 0"></div>
           </div>
         </div>
-        <div class="complex_container">
+        <div class="complex_container revealator-slideleft revealator-once">
           <h2 class="complex_title">Космическая<br>октава</h2>
           <p class="complex_text">Комплекс медитативных программ для работы с планетармым биорезонансом планет солнечной системы.</p>
           <br>
@@ -726,8 +748,8 @@
     </section>
     <section class="radio">
       <div class="wrapper">
-        <h2 class="radio_title">Интернет - радиостанция</h2>
-        <div class="radio_container">
+        <h2 class="radio_title revealator-slideright revealator-once">Интернет - радиостанция</h2>
+        <div class="radio_container revealator-slideleft revealator-once">
           <div id="jquery_jplayer_1" class="jp-jplayer"></div>
           <div id="jp_container_1" class="jp-audio">
             <div class="jp-type-single">
@@ -783,9 +805,9 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="wrapper top">
+    <div class="wrapper top revealator-slideup revealator-once">
       <div class="footer_container">
-        <h3 class="footer_title">Программы</h3>
+        <a href="" class="footer_title">Программы</a>
         <div class="footer_list_container">
           <ul class="footer_list">
             <li class="footer_list_item">
@@ -842,7 +864,7 @@
         </div>
       </div>
       <div class="footer_container">
-        <h3 class="footer_title">Онлайн-медитации</h3>
+        <a href="" class="footer_title">Онлайн-медитации</a>
         <div class="footer_list_container">
           <ul class="footer_list">
             <li class="footer_list_item">
@@ -884,7 +906,7 @@
         </div>
       </div>
       <div class="footer_container footer_container_articles">
-        <h3 class="footer_title">Статьи</h3>
+        <a href="" class="footer_title">Статьи</a>
         <div class="footer_list_container">
           <ul class="footer_list">
             <li class="footer_list_item">
@@ -912,14 +934,19 @@
         </div>
       </div>
       <div class="footer_container">
-        <ul class="footer_language_list">
-          <li class="footer_language_item">
-            <a class="footer_language_link" href="">RU</a>
-          </li>
-          <li class="footer_language_item display_none">
-            <a class="footer_language_link" href="">EN</a>
-          </li>
-        </ul>
+        <div class="footer_language">
+          <ul class="footer_language_list">
+            <li class="footer_language_item footer_language_switch">
+              <a href="" class="footer_language_link">RU</a>
+            </li>
+            <li class="footer_language_item">
+              <a href="" class="footer_language_link">EN</a>
+            </li>
+            <li class="footer_language_item">
+              <a href="" class="footer_language_link">IT</a>
+            </li>
+          </ul>
+        </div>
         <ul class="footer_soc_list">
           <li class="footer_soc_item">
             <a href="" class="footer_soc_link">
@@ -974,6 +1001,7 @@
   <script src="js/jquery.countdown-ru.js"></script>
   <script src="js/jquery.jplayer.min.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/fm.revealator.jquery.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>

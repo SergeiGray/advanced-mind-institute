@@ -19,40 +19,74 @@
         controlNav: false,
         directionNav: true,
         touch: true,
-        move: 1
+        move: 1,
+        animationLoop: false,
+        animationSpeed: 900,
+        keyboard: false,
+        before: function(slider) {
+          slider.last = slider.count - 4;
+        }
       });
       $('.feedback_slider').flexslider({
         selector: ".feedback_slider_container > li",
+        controlsContainer: ".feedback_flipping",
         animation: "slide",
         slideshow: false,
         smoothHeight: true,
         keyboard: true,
-        prevText: "",
-        nextText: "",
+        prevText: "Пред.",
+        nextText: "След.",
         itemWidth: 1610,
-        itemMargin: 0,
+        itemMargin: 50,
         minItems: 1,
         maxItems: 1,
         controlNav: false,
         directionNav: true,
         touch: true,
         move: 1,
+        animationLoop: false,
+        animationSpeed: 900,
+        keyboard: false,
         start: function(slider) {
           $('.feedback_slider_item_total').text(slider.count);
+          $(slider.slides[slider.currentSlide]).find('.feedback_slider_text').niceScroll({
+            cursorborder: "none",
+            cursoropacitymin: "1",
+            cursorwidth: "4px",
+            scrollspeed: "30",
+            mousescrollstep: "10",
+            background: "#b1b1b1",
+            cursorminheight: "97"
+          });
+        },
+        before: function(slider) {
+          $(slider.slides).find('.feedback_slider_text').getNiceScroll().remove();
         },
         after: function(slider) {
           $('.feedback_slider_item_index').text(slider.currentSlide + 1);
+          $(slider.slides).find('.feedback_slider_text').getNiceScroll().remove();
+          $(slider.slides[slider.currentSlide]).find('.feedback_slider_text').niceScroll({
+            cursorborder: "none",
+            cursoropacitymin: "1",
+            cursorwidth: "4px",
+            scrollspeed: "30",
+            mousescrollstep: "10",
+            background: "#b1b1b1",
+            cursorminheight: "97"
+          });
         }
       });
       $('.store_slider').flexslider({
         selector: ".store_slider_container > li",
+        controlsContainer: ".store_flipping",
         animation: "slide",
+        easing: "swing",
         slideshow: false,
         startAt: 1,
         smoothHeight: true,
         keyboard: true,
-        prevText: "",
-        nextText: "",
+        prevText: "Пред.",
+        nextText: "След.",
         itemWidth: 810,
         itemMargin: 0,
         minItems: 1,
@@ -61,79 +95,91 @@
         controlNav: false,
         directionNav: true,
         touch: true,
+        animationLoop: false,
+        animationSpeed: 900,
+        keyboard: false,
         start: function(slider) {
-          $('.store_slider_item_total').text(slider.count - 1);
+          $('.store_slider_item_total').text(slider.count);
+          $('.store_slider_item_index').text(slider.currentSlide + 1);
           $(slider.slides[slider.currentSlide]).addClass('store_active_item');
+        },
+        before: function(slider) {
+          slider.last = slider.count - 1;
+          if (slider.direction === "next") {
+            $(slider.slides).removeClass('store_active_item');
+            $(slider.slides[slider.currentSlide + 1]).addClass('store_active_item');
+          }
+          if (slider.direction === "prev") {
+            $(slider.slides).removeClass('store_active_item');
+            $(slider.slides[slider.currentSlide - 1]).addClass('store_active_item');
+          }
         },
         after: function(slider) {
           $('.store_slider_item_index').text(slider.currentSlide + 1);
-          $(slider.slides).removeClass('store_active_item');
-          $(slider.slides[slider.currentSlide]).addClass('store_active_item');
         }
       });
       $('.online_slider').flexslider({
         selector: ".online_slider_container > li",
+        controlsContainer: ".online_flipping",
         animation: "slide",
         slideshow: false,
         smoothHeight: true,
         keyboard: true,
-        prevText: "",
-        nextText: "",
+        prevText: "Пред.",
+        nextText: "След.",
         itemWidth: 720,
         itemMargin: 0,
-        minItems: 1,
+        minItems: 0,
         maxItems: 3,
         move: 1,
         controlNav: false,
         directionNav: true,
         touch: true,
+        animationLoop: false,
+        animationSpeed: 900,
+        keyboard: false,
         start: function(slider) {
-          $('.online_slider_item_total').text(slider.count - 1);
+          $('.online_slider_item_total').text(slider.count);
+          $('.online_slider_item_index').text(slider.currentSlide + 1);
           $(slider.slides[slider.currentSlide]).addClass('online_active_item');
           $(slider.slides[slider.currentSlide + 1]).addClass('online_slider_m_first');
           $(slider.slides[slider.currentSlide + 2]).addClass('online_slider_m_second');
         },
+        before: function(slider) {
+          if (slider.direction === "next") {
+            $(slider.slides).removeClass('online_slider_m_first online_slider_m_second online_active_item');
+            $(slider.slides[slider.currentSlide + 2]).addClass('online_slider_m_first');
+            $(slider.slides[slider.currentSlide + 3]).addClass('online_slider_m_second');
+            $(slider.slides[slider.currentSlide + 1]).addClass('online_active_item');
+          }
+          if (slider.direction === "prev") {
+            $(slider.slides).removeClass('online_slider_m_first online_slider_m_second online_active_item');
+            $(slider.slides[slider.currentSlide + 1]).addClass('online_slider_m_second');
+            $(slider.slides[slider.currentSlide]).addClass('online_slider_m_first');
+            $(slider.slides[slider.currentSlide - 1]).addClass('online_active_item');
+          }
+          slider.last = slider.count - 1;
+        },
         after: function(slider) {
           $('.online_slider_item_index').text(slider.currentSlide + 1);
-          $(slider.slides).removeClass('online_slider_m_first online_slider_m_second online_active_item');
-          $(slider.slides[slider.currentSlide]).addClass('online_active_item');
-          $(slider.slides[slider.currentSlide + 1]).addClass('online_slider_m_first');
-          $(slider.slides[slider.currentSlide + 2]).addClass('online_slider_m_second');
-
         }
       });
     });
   };
 
+  var rellax = new Rellax('.parallax');
+
   var scrollBarСustomization = function () {
     $(document).ready(function() {
-      $('.feedback_slider_text').niceScroll({
+      $('body').niceScroll({
         cursorborder: "none",
-        cursoropacitymin: "0",
-        cursorwidth: "4px",
-        scrollspeed: "30",
+        scrollspeed: "15",
         mousescrollstep: "10",
-        background: "#b1b1b1",
-        cursorminheight: "97"
+        horizrailenabled: false
       });
-    });
-
-    $('.feedback_flipping .flex-next, .feedback_flipping .flex-prev').click(function(evt) {
-        $('.feedback_slider_text').getNiceScroll().remove();
-        $('.feedback_slider_text').niceScroll({
-          cursorborder: "none",
-          cursoropacitymin: "0",
-          cursorwidth: "4px",
-          scrollspeed: "30",
-          mousescrollstep: "10",
-          background: "#b1b1b1",
-          cursorminheight: "97"
-        });
+      $('window').trigger('scroll');
     });
   };
-
-  var rellaxFirst = new Rellax('.parallax_first_container');
-  var rellaxSecond = new Rellax('.parallax_second_container');
 
   var getTimer = function () {
     jQuery(document).ready(function($) {
@@ -200,11 +246,34 @@
       evt.preventDefault();
       $('.header_language').toggleClass('active');
     });
+    $('.footer_language_switch').click(function(evt) {
+      evt.preventDefault();
+      $('.footer_language').toggleClass('active');
+    });
     $(document).mouseup(function(evt) {
-      var div = $('.header_language_switch');
-      if (!div.is(evt.target) && div.has(evt.target).length === 0) {
+      var header = $('.header_language_switch');
+      var footer = $('.footer_language_switch');
+      if (!header.is(evt.target) && header.has(evt.target).length === 0) {
        $('.header_language').removeClass('active');
       }
+      if (!footer.is(evt.target) && footer.has(evt.target).length === 0) {
+       $('.footer_language').removeClass('active');
+      }
+    });
+  };
+
+  var storeShowCard = function () {
+    $('.store_slider_overlay_button').click(function(evt) {
+      evt.preventDefault();
+      $(evt.currentTarget).parents('.store_slider_item').find('.store_slider_image').addClass('display_none');
+      $(evt.currentTarget).parents('.store_slider_item').find('.store_slider_overlay').addClass('display_none');
+      $(evt.currentTarget).parents('.store_slider_item').find('.store_slider_content').addClass('display_flex');
+    });
+    $('.store_slider_content').mouseleave(function(evt) {
+      evt.preventDefault;
+      $(evt.currentTarget).parents('.store_slider_item').find('.store_slider_image').removeClass('display_none');
+      $(evt.currentTarget).parents('.store_slider_item').find('.store_slider_overlay').removeClass('display_none');
+      $(evt.currentTarget).parents('.store_slider_item').find('.store_slider_content').removeClass('display_flex');
     });
   };
 
@@ -213,5 +282,6 @@
   getTimer();
   showHeaderMenu();
   showLanguageMenu();
+  storeShowCard();
 
 }());
