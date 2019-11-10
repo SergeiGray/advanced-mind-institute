@@ -1,3 +1,7 @@
+$hover-color: #5E5EB6;
+$active-color: #6D6DD0;
+
+
 @mixin font_Ubuntu {
   font-family: Ubuntu, Arial, sans-serif;
 }
@@ -9,11 +13,11 @@
 }
 
 @mixin lhc {
-  color: #5E5EB6;
+  color: $hover-color;
 }
 
 @mixin lac {
-  color: #6D6DD0;
+  color: $active-color;
 }
 
 @mixin lc {

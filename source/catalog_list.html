@@ -6,20 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="css/select2.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <header class="header">
     <div class="wrapper">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <img class="logo_image" src="img/logo.png" alt="Логотип" width="43" height="43">
         <p class="logo_text">Advanced<br>Mind Institute</p>
-      </div>
+      </a>
       <nav class="header_navigation">
         <ul class="header_navigation_list">
           <li class="header_navigation_item">
-            <a href="" class="header_navigation_link">Программы</a>
-            <div class="header_navigation_container">
+            <a href="" class="header_navigation_link header_navigation_drop_down">Программы</a>
+            <div class="header_navigation_container header_navigation_program">
               <ul class="header_navigation_container_list">
                 <li class="header_navigation_container_item">
                   <a href="" class="header_navigation_container_link fw500">Магазин программ</a>
@@ -126,53 +128,60 @@
           </li>
           <li class="header_navigation_item">
             <a href="" class="header_navigation_link">Neuromatrix&nbsp;PRO</a>
-            <div class="header_navigation_container">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi doloremque laborum, illum esse sed necessitatibus soluta explicabo, quaerat quo fugit eum cupiditate amet quas ab. In rerum voluptate facilis molestiae pariatur fugit blanditiis, illo molestias unde eius est id necessitatibus laudantium esse veniam, iure vitae ab, tenetur quis quos officiis cumque. Voluptate earum aliquam dolorem nostrum non at, praesentium porro fugit possimus, odio alias eveniet corporis ratione obcaecati eius placeat magni accusantium ad debitis deleniti. Eveniet deleniti ab vero, enim officia fugiat natus amet eligendi vel asperiores impedit quia dolor nulla animi harum, laboriosam magnam, quos, sit earum blanditiis totam vitae magni qui? Et repellat excepturi quod, ad officiis nobis cum. Dolore fuga corporis ratione debitis cum alias excepturi recusandae facere ducimus ex veritatis necessitatibus sapiente reprehenderit incidunt, atque neque, dolores autem molestias error iusto labore ea rerum temporibus quasi. Assumenda explicabo obcaecati possimus sequi facilis aperiam ab, voluptatum, quo adipisci. Mollitia eius, laudantium, quod quisquam illo quam officiis ab aliquam obcaecati numquam cupiditate deserunt, itaque doloremque repellendus aut natus!
-            </div>
           </li>
           <li class="header_navigation_item">
             <a href="" class="header_navigation_link">Статьи</a>
-            <div class="header_navigation_container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae iste et alias adipisci minima nostrum perferendis, quo aperiam porro temporibus consequatur aspernatur nesciunt veniam assumenda architecto! Quae quia ab aliquam, deleniti repellendus? Cum corporis nemo rem eaque aspernatur quae, sapiente voluptatem sit porro a. Ratione laboriosam, possimus ex inventore, tempore delectus harum, libero id culpa saepe quibusdam esse tenetur. Neque exercitationem quam ducimus excepturi ab, adipisci, molestias saepe corrupti odio magni accusantium, doloremque, ad dolor asperiores laboriosam reprehenderit dicta distinctio error velit nesciunt sed possimus laborum. Ea debitis illum, rem. Enim officiis, reprehenderit placeat, unde accusamus nobis sunt assumenda possimus ducimus repellendus. Quis amet excepturi maxime qui architecto? Officiis harum, doloribus reiciendis exercitationem quis numquam possimus ab a architecto. Est repellat commodi dolorum perferendis odit sunt deserunt fuga fugiat ea quasi! Recusandae dolores ipsam aperiam accusantium facere adipisci iusto dolorum est fuga illo, pariatur sequi repellendus facilis explicabo quo animi suscipit alias quisquam deserunt architecto ea, ipsum nesciunt obcaecati reiciendis. Non quos soluta veniam magnam tempora aut iusto. Error, dicta.</div>
           </li>
           <li class="header_navigation_item">
-            <a href="" class="header_navigation_link">Поддержка</a>
-            <div class="header_navigation_container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae iste et alias adipisci minima nostrum perferendis, quo aperiam porro temporibus consequatur aspernatur nesciunt veniam assumenda architecto! Quae quia ab aliquam, deleniti repellendus? Cum corporis nemo rem eaque aspernatur quae, sapiente voluptatem sit porro a. Ratione laboriosam, possimus ex inventore, tempore delectus harum, libero id culpa saepe quibusdam esse tenetur. Neque exercitationem quam ducimus excepturi ab, adipisci, molestias saepe corrupti odio magni accusantium, doloremque, ad dolor asperiores laboriosam reprehenderit dicta distinctio error velit nesciunt sed possimus laborum. Ea debitis illum, rem. Enim officiis, reprehenderit placeat, unde accusamus nobis sunt assumenda possimus ducimus repellendus. Quis amet excepturi maxime qui architecto? Officiis harum, doloribus reiciendis exercitationem quis numquam possimus ab a architecto. Est repellat commodi dolorum perferendis odit sunt deserunt fuga fugiat ea quasi! Recusandae dolores ipsam aperiam accusantium facere adipisci iusto dolorum est fuga illo, pariatur sequi repellendus facilis explicabo quo animi suscipit alias quisquam deserunt architecto ea, ipsum nesciunt obcaecati reiciendis. Non quos soluta veniam magnam tempora aut iusto. Error, dicta.</div>
+            <a href="" class="header_navigation_link header_navigation_drop_down">Поддержка</a>
+            <div class="header_navigation_container header_navigation_support">
+              <ul class="header_navigation_container_list">
+                <li class="header_navigation_container_item">
+                  <a href="" class="header_navigation_container_link fw400">FAQ</a>
+                </li>
+                <li class="header_navigation_container_item">
+                  <a href="" class="header_navigation_container_link fw400">Служба поддержки</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="header_navigation_item">
             <a href="" class="header_navigation_link">Контакты</a>
-            <div class="header_navigation_container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae iste et alias adipisci minima nostrum perferendis, quo aperiam porro temporibus consequatur aspernatur nesciunt veniam assumenda architecto! Quae quia ab aliquam, deleniti repellendus? Cum corporis nemo rem eaque aspernatur quae, sapiente voluptatem sit porro a. Ratione laboriosam, possimus ex inventore, tempore delectus harum, libero id culpa saepe quibusdam esse tenetur. Neque exercitationem quam ducimus excepturi ab, adipisci, molestias saepe corrupti odio magni accusantium, doloremque, ad dolor asperiores laboriosam reprehenderit dicta distinctio error velit nesciunt sed possimus laborum. Ea debitis illum, rem. Enim officiis, reprehenderit placeat, unde accusamus nobis sunt assumenda possimus ducimus repellendus. Quis amet excepturi maxime qui architecto? Officiis harum, doloribus reiciendis exercitationem quis numquam possimus ab a architecto. Est repellat commodi dolorum perferendis odit sunt deserunt fuga fugiat ea quasi! Recusandae dolores ipsam aperiam accusantium facere adipisci iusto dolorum est fuga illo, pariatur sequi repellendus facilis explicabo quo animi suscipit alias quisquam deserunt architecto ea, ipsum nesciunt obcaecati reiciendis. Non quos soluta veniam magnam tempora aut iusto. Error, dicta.</div>
           </li>
         </ul>
       </nav>
       <div class="header_language">
-        <button class="header_language_button">RU</button>
         <ul class="header_language_list">
-          <li class="header_language_item">
+          <li class="header_language_item header_language_switch">
             <a href="" class="header_language_link">RU</a>
           </li>
           <li class="header_language_item">
             <a href="" class="header_language_link">EN</a>
+          </li>
+          <li class="header_language_item">
+            <a href="" class="header_language_link">IT</a>
           </li>
         </ul>
       </div>
       <a href="" class="header_login">Авторизация</a>
       <ul class="header_menu_list">
         <li class="header_menu_item">
-          <a href="" class="header_menu_link">
+          <a href="" class="header_menu_link" title="Мои желания">
             <svg class="icon" width="25" height="25">
               <use xlink:href="img/sprite.svg#icon-heart"></use>
             </svg>
           </a>
         </li>
         <li class="header_menu_item">
-          <a href="" class="header_menu_link">
+          <a href="" class="header_menu_link" title="Поиск">
             <svg class="icon" width="23" height="22">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
           </a>
         </li>
         <li class="header_menu_item">
-          <a href="" class="header_menu_link">
+          <a href="" class="header_menu_link basket" title="Корзина">
+            <span class="header_menu_basket_counter">23</span>
             <svg class="icon" width="23" height="23">
               <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
             </svg>
@@ -190,21 +199,1049 @@
         <a class="breadcrumbs_link" href="">Лечение и оздоровление</a>
       </div>
     </div>
-    <section class="catalog_list">
+    <article class="banner catalog_banner">
       <div class="wrapper">
-        <div class="catalog_list_header">
-          <h1 class="catalog_list_title">
+        <div class="banner_container">
+          <h1 class="banner_title">
             <span class="subtitle">Магазин программ</span>
             Лечение<br>и оздоровление
           </h1>
         </div>
       </div>
-    </section>
+    </article>
+    <article class="catalog">
+      <div class="wrapper">
+        <section class="catalog_section">
+          <div class="catalog_header">
+            <div class="catalog_header_top">
+              <div class="catalog_sorting">
+                <h3 class="catalog_sorting_title">Сортировать по:</h3>
+                <select name="" class="select catalog_sorting_select">
+                  <option value="date" class="catalog_sorting_link">дате разработки</option>
+                  <option value="price" class="catalog_sorting_link">цене</option>
+                  <option value="title" class="catalog_sorting_link">названию</option>
+                  <option value="popularity" class="catalog_sorting_link">популярности</option>
+                </select>
+                <button class="catalog_sorting_graduation">
+                  <svg class="icon catalog_sorting_graduation_increase active" width="10" height="10">
+                    <use xlink:href="img/sprite.svg#icon-graduation-increase"></use>
+                  </svg>
+                  <svg class="icon catalog_sorting_graduation_reduction" width="10" height="10">
+                    <use xlink:href="img/sprite.svg#icon-graduation-reduction"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="catalog_apportionment">
+                <button class="catalog_apportionment_list active">
+                  <svg class="icon" width="18" height="16">
+                    <use xlink:href="img/sprite.svg#icon-list"></use>
+                  </svg>
+                </button>
+                <button class="catalog_apportionment_tile">
+                  <svg class="icon" width="18" height="19">
+                    <use xlink:href="img/sprite.svg#icon-tile"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="catalog_header_bottom">
+              <ul class="catalog_category_list">
+                <li class="catalog_category_item"><a href="" class="catalog_category_link button_gray active">Все платные</a></li>
+                <li class="catalog_category_item"><a href="" class="catalog_category_link button_gray">Программы со скидкой</a></li>
+                <li class="catalog_category_item"><a href="" class="catalog_category_link button_gray">Популярные программы</a></li>
+                <li class="catalog_category_item"><a href="" class="catalog_category_link button_gray">Подписка</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="catalog_main">
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">Эпсилон-синхронизация</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Эпсилон-синхронизация» представляет собой экспериментальную программу синхронизации ритмов сети пассивного режима работы мозга на сверхнизких частотах 01Гц-0,2Гц</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale active">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">Нейроакустическая акупунктура</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Нейроакустическая акупунктура» представляет собой фонограмму, на которую наложена матрица частот основных энергетических центров и меридианов. Эти частоты воздействуют на распределение и нормализацию энергетических потоков в организме.</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">Программа достижения высоких спортивных результатов</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Нейроакустическая акупунктура» представляет собой фонограмму, на которую наложена матрица частот основных энергетических центров и меридианов. Эти частоты воздействуют на распределение и нормализацию энергетических потоков в организме.</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">Энерготерапия</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Эпсилон-синхронизация» представляет собой экспериментальную программу синхронизации ритмов сети пассивного режима работы мозга на сверхнизких частотах 01Гц-0,2Гц</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">Исцеление голоданием</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Эпсилон-синхронизация» представляет собой экспериментальную программу синхронизации ритмов сети пассивного режима работы мозга на сверхнизких частотах 01Гц-0,2Гц</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">Снятие психосоматических блоков</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Эпсилон-синхронизация» представляет собой экспериментальную программу синхронизации ритмов сети пассивного режима работы мозга на сверхнизких частотах 01Гц-0,2Гц</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">OmniSync</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Эпсилон-синхронизация» представляет собой экспериментальную программу синхронизации ритмов сети пассивного режима работы мозга на сверхнизких частотах 01Гц-0,2Гц</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="catalog_card">
+              <img src="img/program_cards/remotionem_psychosomatic_cuneos_1.png" alt="" class="catalog_card_img" width="485" height="304">
+              <div class="catalog_card_content">
+                <div class="catalog_card_content_header">
+                  <h3 class="catalog_card_title">Мантра исцеления</h3>
+                  <button class="catalog_card_like">
+                    <svg class="icon" width="25" height="25">
+                      <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="catalog_card_rating">
+                  <ul class="catalog_card_rating_list">
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_rating_item">
+                      <svg class="icon disable" width="20" height="20">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                  <p class="catalog_card_rating_number">
+                    <span class="catalog_card_rating_index">4.84</span>
+                    /
+                    <span class="catalog_card_rating_total">14</span>
+                  </p>
+                </div>
+                <p class="catalog_card_text">Программа «Эпсилон-синхронизация» представляет собой экспериментальную программу синхронизации ритмов сети пассивного режима работы мозга на сверхнизких частотах 01Гц-0,2Гц</p>
+                <div class="catalog_card_attributes">
+                  <ul class="catalog_card_attributes_list">
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="19">
+                        <title>Использовать в стереонаушниках</title>
+                        <use xlink:href="img/sprite.svg#icon-headphones"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="19" height="20">
+                        <title>Допускается использование стерео-системы</title>
+                        <use xlink:href="img/sprite.svg#icon-speaker"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="19" height="19">
+                        <title>Допускается использование в режиме медитации</title>
+                        <use xlink:href="img/sprite.svg#icon-yoga"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="25" height="20">
+                        <title>Проверяйте полярность наушников</title>
+                        <use xlink:href="img/sprite.svg#icon-lr"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item">
+                      <svg class="icon" width="28" height="19">
+                        <title>Программа разработана с использованием технологии Dolby Surround 5.1</title>
+                        <use xlink:href="img/sprite.svg#icon-stereo"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="26" height="26">
+                        <title>Программа разработана с использованием технологии AudioStrobe</title>
+                        <use xlink:href="img/sprite.svg#icon-3dglasses"></use>
+                      </svg>
+                    </li>
+                    <li class="catalog_card_attributes_item disable">
+                      <svg class="icon" width="24" height="21">
+                        <title>Допускается использование в фоновом режиме</title>
+                        <use xlink:href="img/sprite.svg#icon-kube"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="catalog_card_price">
+                <div class="catalog_card_price_number">
+                  <span class="catalog_card_price_actual">$20.70</span>
+                  <span class="catalog_card_price_old">$30.35</span>
+                </div>
+                <button class="catalog_card_price_buy button_transparent">Купить
+                  <svg class="icon" width="23" height="23">
+                    <use xlink:href="img/sprite.svg#icon-shopping-cart"></use>
+                  </svg>
+                </button>
+                <div class="catalog_card_price_sale">
+                  <svg class="icon" width="70" height="70">
+                    <use xlink:href="img/sprite.svg#icon-price-sale"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_footer">
+            <div class="pagination">
+              <ul class="pagination_list">
+                <li class="pagination_item">
+                  <a href="" class="pagination_link active">1</a>
+                </li>
+                <li class="pagination_item">
+                  <a href="" class="pagination_link">2</a>
+                </li>
+                <li class="pagination_item">
+                  <a href="" class="pagination_link">3</a>
+                </li>
+                <li class="pagination_item">
+                  <a href="" class="pagination_link">4</a>
+                </li>
+              </ul>
+              <div class="pagination_flipping">
+                <buttom class="pagination_flipping_prev pagination_flipping_buttom">
+                  <svg class="icon" width="58" height="12">
+                    <use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+                  </svg>
+                </buttom>
+                <buttom class="pagination_flipping_next pagination_flipping_buttom">
+                  <svg class="icon" width="58" height="12">
+                    <use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+                  </svg>
+                </buttom>
+              </div>
+            </div>
+          </div>
+        </section>
+        <aside class="catalog_aside">
+          <form action="#" class="catalog_aside_form">
+            <label class="catalog_aside_search">
+              <h3 class="catalog_aside_title">Поиск программ</h3>
+              <input id="catalog_search" type="search" class="catalog_aside_input">
+            </label>
+            <div class="catalog_aside_container">
+              <button class="catalog_aside_title catalog_aside_title_frequency">Частоты
+                <svg class="icon" width="7" height="5">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <div class="catalog_aside_frequency_container">
+                <div class="catalog_aside_checkbox">
+                  <input id="frequency_alpha" class="checkbox" type="checkbox" name="frequency_alpha">
+                  <label for="frequency_alpha" class="checkbox_label">Альфа</label>
+                </div>
+                <div class="catalog_aside_checkbox">
+                  <input id="frequency_beta" class="checkbox" type="checkbox" name="frequency_beta">
+                  <label for="frequency_beta" class="checkbox_label">Бета</label>
+                </div>
+                <div class="catalog_aside_checkbox">
+                  <input id="frequency_gamma" class="checkbox" type="checkbox" name="frequency_gamma">
+                  <label for="frequency_gamma" class="checkbox_label">Гамма</label>
+                </div>
+                <div class="catalog_aside_checkbox">
+                  <input id="frequency_delta" class="checkbox" type="checkbox" name="frequency_delta">
+                  <label for="frequency_delta" class="checkbox_label">Дельта</label>
+                </div>
+                <div class="catalog_aside_checkbox">
+                  <input id="frequency_theta" class="checkbox" type="checkbox" name="frequency_theta">
+                  <label for="frequency_theta" class="checkbox_label">Тета</label>
+                </div>
+                <div class="catalog_aside_checkbox">
+                  <input id="frequency_epsilon" class="checkbox" type="checkbox" name="frequency_epsilon">
+                  <label for="frequency_epsilon" class="checkbox_label">Эпсилон</label>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="catalog_aside_container">
+            <h3 class="catalog_aside_title">Категории</h3>
+            <ul class="catalog_aside_list">
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Лечение и оздоровление</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Обучение и повышение IQ</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Эмоции и настроение</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Здоровый сон</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Энергия и мотивация</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Расслабляющие медитации</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Снятие стресса</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Общие медитации</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Снятие зависимостей</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Спортивные результаты</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Умственные способности</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Планетарный биорезонанс</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Последние просмотренные</a></li>
+            </ul>
+          </div>
+          <div class="catalog_aside_container">
+            <h3 class="catalog_aside_title">Типы программ</h3>
+            <ul class="catalog_aside_list">
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Магазин программ</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Онлайн медитации</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Программы для скачивания</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Планетарный час</a></li>
+              <li class="catalog_aside_item"><a href="" class="catalog_aside_link">Brainwave Radio</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </article>
   </main>
   <footer class="footer">
-    <div class="wrapper">
+    <div class="wrapper top">
       <div class="footer_container">
-        <h3 class="footer_title">Программы</h3>
+        <a href="" class="footer_title">Программы</a>
         <div class="footer_list_container">
           <ul class="footer_list">
             <li class="footer_list_item">
@@ -261,7 +1298,7 @@
         </div>
       </div>
       <div class="footer_container">
-        <h3 class="footer_title">Онлайн-медитации</h3>
+        <a href="" class="footer_title">Онлайн-медитации</a>
         <div class="footer_list_container">
           <ul class="footer_list">
             <li class="footer_list_item">
@@ -303,7 +1340,7 @@
         </div>
       </div>
       <div class="footer_container footer_container_articles">
-        <h3 class="footer_title">Статьи</h3>
+        <a href="" class="footer_title">Статьи</a>
         <div class="footer_list_container">
           <ul class="footer_list">
             <li class="footer_list_item">
@@ -331,14 +1368,19 @@
         </div>
       </div>
       <div class="footer_container">
-        <ul class="footer_language_list">
-          <li class="footer_language_item">
-            <a class="footer_language_link" href="">RU</a>
-          </li>
-          <li class="footer_language_item display_none">
-            <a class="footer_language_link" href="">EN</a>
-          </li>
-        </ul>
+        <div class="footer_language">
+          <ul class="footer_language_list">
+            <li class="footer_language_item footer_language_switch">
+              <a href="" class="footer_language_link">RU</a>
+            </li>
+            <li class="footer_language_item">
+              <a href="" class="footer_language_link">EN</a>
+            </li>
+            <li class="footer_language_item">
+              <a href="" class="footer_language_link">IT</a>
+            </li>
+          </ul>
+        </div>
         <ul class="footer_soc_list">
           <li class="footer_soc_item">
             <a href="" class="footer_soc_link">
@@ -364,6 +1406,25 @@
         </ul>
       </div>
     </div>
+    <hr class="footer_separator_line">
+    <div class="wrapper bottom">
+      <p class="footer_copyright">© Advanced Mind Institute 2014–2019.</p>
+      <ul class="footer_list">
+        <li class="footer_list_item">
+          <a href="" class="footer_list_link">Политика конфиденциальности</a>
+        </li>
+        <li class="footer_list_item">
+          <a href="" class="footer_list_link">Политика cookie</a>
+        </li>
+        <li class="footer_list_item">
+          <a href="" class="footer_list_link">Лицензионное соглашение</a>
+        </li>
+        <li class="footer_list_item">
+          <a href="" class="footer_list_link">Партнерская программа</a>
+        </li>
+      </ul>
+      <a href="https://foxproject.net" class="footer_list_link">Designed by</a>
+    </div>
   </footer>
 
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -373,6 +1434,10 @@
   <script src="js/jquery.countdown.min.js"></script>
   <script src="js/jquery.countdown-ru.js"></script>
   <script src="js/jquery.jplayer.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/fm.revealator.jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/select2.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>

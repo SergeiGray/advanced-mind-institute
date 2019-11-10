@@ -1,6 +1,6 @@
-.catalog_list {
+.banner {
 
-  &_header {
+  &_container {
     @include bgi;
     display: flex;
     box-sizing: border-box;
@@ -17,11 +17,12 @@
     display: flex;
     flex-direction: column;
     line-height: 160%;
+    margin-right: 215px;
 
     &::after {
       @include title_line;
-      top: 60px;
-      left: -119px;
+      top: 100px;
+      left: -95px;
       transform: rotate(90deg);
     }
 

@@ -281,11 +281,56 @@
     });
   };
 
+  var showAutocompleteHint = function() {
+    var availableTags = [
+      "Сенсомоторный ритм",
+      "Настройка на ритмы Солнечной системы",
+      "Планетарные биоритмы Земли"
+    ];
+    $( "#catalog_search" ).autocomplete({
+      source: availableTags
+    });
+  };
+
+  $('.catalog_aside_title_frequency').click(function(evt) {
+    evt.preventDefault();
+    $('.catalog_aside_frequency_container').toggle("fade", "slow", function() {
+      $(evt.currentTarget).parent('.catalog_aside_container').toggleClass('disable');
+    });
+  });
+
+  var hangSelect2 = function () {
+    $(document).ready(function() {
+      $('.select').select2();
+    });
+  };
+
+  var changeActive = function () {
+    $('.catalog_sorting_graduation').click(function(evt) {
+      evt.preventDefault();
+      $('.catalog_sorting_graduation_increase').toggleClass('active');
+      $('.catalog_sorting_graduation_reduction').toggleClass('active');
+    });
+    $('.catalog_apportionment').click(function(evt) {
+      evt.preventDefault();
+      $('.catalog_apportionment_list').toggleClass('active');
+      $('.catalog_apportionment_tile').toggleClass('active');
+    });
+    $('.catalog_category_link').click(function(evt) {
+      evt.preventDefault();
+      $(evt.currentTarget).parents('.catalog_category_list').find('.catalog_category_link').removeClass('active');
+      $(evt.currentTarget).addClass('active');
+    });
+  };
+
   hangFlexslider();
   scrollBarСustomization();
   getTimer();
   showHeaderMenu();
   showLanguageMenu();
   storeShowCard();
+  showAutocompleteHint();
+  hangSelect2();
+  changeActive();
 
 }());
