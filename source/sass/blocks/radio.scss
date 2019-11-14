@@ -126,7 +126,7 @@
     background-position: center;
   }
 
-   .jp-play {
+  .jp-play {
     background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='36.5' stroke='%23000000' stroke-width='3'/%3E%3Cpath d='M53 38L30.5 50.9904L30.5 25.0096L53 38Z' fill='%23000000'/%3E%3C/svg%3E%0A");
 
     &:hover {
@@ -136,7 +136,7 @@
     &:active {
       background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='36.5' stroke='%236D6DD0' stroke-width='3'/%3E%3Cpath d='M53 38L30.5 50.9904L30.5 25.0096L53 38Z' fill='%236D6DD0'/%3E%3C/svg%3E%0A");
     }
-   }
+  }
 
   .jp-pause {
     background-image: url("data:image/svg+xml,%3Csvg width='76' height='76' viewBox='0 0 76 76' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='38' cy='38' r='36.5' stroke='%23000000' stroke-width='3'/%3E%3Crect x='27' y='25' width='8' height='26' fill='%23000000'/%3E%3Crect x='41' y='25' width='8' height='26' fill='%23000000'/%3E%3C/svg%3E%0A");

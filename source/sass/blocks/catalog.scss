@@ -255,7 +255,9 @@
     }
 
     &_img {
-      margin-right: 40px;
+      &_container {
+        margin-right: 40px;
+      }
     }
 
     &_content {
@@ -274,44 +276,19 @@
     }
 
     &_title {
-      flex: 1;
+      @include lc;
+      max-width: 425px;
       font-weight: 500;
       font-size: 26px;
       line-height: 30px;
       color: #222222;
-      margin: 0 0 20px;
+      margin: 0 auto 20px 0;
+      text-decoration: none;
+      transition: .5s;
     }
 
     &_like {
-      display: flex;
-      width: 25px;
-      height: 25px;
-      padding: 0;
-      border: none;
-      background-color: transparent;
       margin: 8px 12px 0px 0;
-
-      &:hover {
-        .icon {
-          fill: $hover-color;
-        }
-      }
-
-      &:active {
-        .icon {
-          fill: $hover-color;
-        }
-      }
-
-      &.active {
-        .icon {
-          fill: $hover-color;
-        }
-      }
-
-      .icon {
-        fill: #777777;
-      }
     }
 
     &_rating {
@@ -351,30 +328,6 @@
       margin-bottom: auto;
     }
 
-    &_attributes {
-      display: flex;
-
-      &_list {
-        @include list;
-      }
-
-      &_item {
-        display: flex;
-        align-items: center;
-        margin-right: 20px;
-
-        &.disable {
-          .icon {
-            opacity: 0.14;
-          }
-        }
-      }
-
-      .icon {
-        fill: black;
-      }
-    }
-
     &_price {
       display: flex;
       flex-direction: column;
@@ -396,6 +349,7 @@
       }
 
       &_old {
+        display: none;
         font-size: 16px;
         line-height: 18px;
         text-decoration-line: line-through;
@@ -417,13 +371,19 @@
 
       &_sale {
         display: none;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+      }
 
-        &.active {
+      &.closeout {
+        .catalog_card_price_old {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 70px;
-          height: 70px;
+        }
+
+        .catalog_card_price_sale {
+          display: flex;
         }
       }
     }
@@ -463,6 +423,7 @@
         cursor: pointer;
 
         .icon {
+          transform: rotate(0deg);
           fill: #333333;
           margin-top: 11px;
           margin-left: 7px;
@@ -485,8 +446,13 @@
     &_container {
       margin-bottom: 74px;
 
-      &.disable {
+      &.frequency {
         margin-bottom: 33px;
+        transition: .5s;
+      }
+
+      &.enable {
+        margin-bottom: 74px;
 
         .catalog_aside_title_frequency {
           .icon {
@@ -494,6 +460,10 @@
           }
         }
       }
+    }
+
+    &_frequency_container {
+      display: none;
     }
 
     &_list {

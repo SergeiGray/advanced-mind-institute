@@ -2,6 +2,7 @@
 
 (function () {
 
+  var currentSlideFeedbackSlider;
   var hangFlexslider = function () {
     $(document).ready(function() {
       $('.landing_slider').flexslider({
@@ -61,9 +62,11 @@
             background: "#E1E1E1",
             cursorminheight: "97"
           });
+          currentSlideFeedbackSlider = slider.slides[slider.currentSlide];
         },
         before: function(slider) {
           $(slider.slides).find('.feedback_slider_text').getNiceScroll().remove();
+          currentSlideFeedbackSlider = slider.slides[slider.currentSlide];
         },
         after: function(slider) {
           $('.feedback_slider_item_index').text(slider.currentSlide + 1);
@@ -77,6 +80,7 @@
             background: "#E1E1E1",
             cursorminheight: "97"
           });
+          currentSlideFeedbackSlider = slider.slides[slider.currentSlide];
         }
       });
       $('.store_slider').flexslider({
@@ -167,10 +171,29 @@
           $('.online_slider_item_index').text(slider.currentSlide + 1);
         }
       });
+      $('.program_page_aside_slider').flexslider({
+        selector: ".program_page_aside_slider_container > li",
+        controlsContainer: ".program_page_aside_slider_flipping",
+        animation: "slide",
+        slideshow: false,
+        smoothHeight: true,
+        keyboard: true,
+        prevText: "",
+        nextText: "",
+        itemWidth: 325,
+        itemMargin: 5,
+        minItems: 1,
+        maxItems: 1,
+        move: 1,
+        controlNav: false,
+        directionNav: true,
+        touch: true,
+        animationLoop: false,
+        animationSpeed: 900,
+        keyboard: false,
+      });
     });
   };
-
-  var rellax = new Rellax('.parallax');
 
   var scrollBarСustomization = function () {
     $(document).ready(function() {
@@ -292,20 +315,13 @@
     });
   };
 
-  $('.catalog_aside_title_frequency').click(function(evt) {
-    evt.preventDefault();
-    $('.catalog_aside_frequency_container').toggle("fade", "slow", function() {
-      $(evt.currentTarget).parent('.catalog_aside_container').toggleClass('disable');
-    });
-  });
-
   var hangSelect2 = function () {
     $(document).ready(function() {
       $('.select').select2();
     });
   };
 
-  var changeActive = function () {
+  var changeActiveCatalog = function () {
     $('.catalog_sorting_graduation').click(function(evt) {
       evt.preventDefault();
       $('.catalog_sorting_graduation_increase').toggleClass('active');
@@ -321,7 +337,54 @@
       $(evt.currentTarget).parents('.catalog_category_list').find('.catalog_category_link').removeClass('active');
       $(evt.currentTarget).addClass('active');
     });
+    $('.catalog_card_like').click(function(evt) {
+      evt.preventDefault();
+      $(evt.currentTarget).toggleClass('active');
+    });
+    $('.catalog_aside_title_frequency').click(function(evt) {
+      evt.preventDefault();
+      $(evt.currentTarget).parent('.catalog_aside_container').toggleClass('enable');
+      $('.catalog_aside_frequency_container').slideToggle("slow");
+    });
   };
+
+  var changeActiveProgramPage = function () {
+    $('.program_card_like').click(function(evt) {
+      evt.preventDefault();
+      $(evt.currentTarget).toggleClass('active');
+    });
+    $('.program_info_nav_link').click(function(evt) {
+      evt.preventDefault();
+      $('.feedback_slider').find('.feedback_slider_text').getNiceScroll().remove();
+
+      $(evt.currentTarget).parents('.program_info_nav').find('.program_info_nav_link').removeClass('active');
+      $('.program_info_main_unit').removeClass('active');
+      $(evt.currentTarget).addClass('active');
+      if($(evt.currentTarget).hasClass('program_info_specification_link')) {
+        $('.program_info_specification').addClass('active');
+      };
+      if($(evt.currentTarget).hasClass('program_info_feature_link')) {
+        $('.program_info_feature').addClass('active');
+      };
+      if($(evt.currentTarget).hasClass('program_info_meditate_link')) {
+        $('.program_info_meditate').addClass('active');
+      };
+      $(currentSlideFeedbackSlider).find('.feedback_slider_text').niceScroll({
+        cursorborder: "none",
+        cursoropacitymin: "1",
+        cursorwidth: "3px",
+        scrollspeed: "30",
+        mousescrollstep: "10",
+        background: "#E1E1E1",
+        cursorminheight: "97"
+      });
+    });
+  };
+
+
+
+  // var rellax = new Rellax('.parallax');
+
 
   hangFlexslider();
   scrollBarСustomization();
@@ -331,6 +394,7 @@
   storeShowCard();
   showAutocompleteHint();
   hangSelect2();
-  changeActive();
+  changeActiveCatalog();
+  changeActiveProgramPage();
 
 }());
