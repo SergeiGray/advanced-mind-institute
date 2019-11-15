@@ -1,0 +1,162 @@
+.articles {
+  margin-bottom: 95px;
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  &_breadcrumbs {
+    margin-bottom: 60px;
+  }
+
+  &_pagination {
+    margin-bottom: 140px;
+  }
+
+  &_title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 140.4%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin: 0 0 40px;
+  }
+
+  &_top_title,
+  &_middle_title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #333333;
+    margin: 0;
+  }
+
+  &_top_title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  &_middle_title {
+    margin-bottom: 20px;
+  }
+
+  &_text {
+    @include text;
+    line-height: 32px;
+    color: #333333;
+  }
+
+  &_top {
+    display: flex;
+    margin-bottom: 50px;
+
+    &_img {
+      margin-right: 67px;
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 885px;
+    }
+
+    .articles_text {
+      margin-bottom: 36px;
+    }
+  }
+
+  &_middle {
+    margin-bottom: 60px;
+
+    &_img {
+      margin-bottom: 34px;
+    }
+
+    .articles_text {
+      margin-bottom: 50px;
+    }
+  }
+
+  .separator_line {
+    margin: 0 0 50px;
+
+    &.second {
+      margin: 0 0 40px;
+    }
+
+    &.last {
+      margin: 0;
+    }
+  }
+
+  &_list {
+    @include list;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    &.first {
+      .articles_list_item {
+        height: 745px;
+      }
+    }
+
+    &.second {
+      .articles_list_item {
+        height: 722px;
+      }
+    }
+
+    &_separator_line {
+      display: block;
+      width: 1px;
+      background-color: #D5D5D5;
+    }
+
+    &_item {
+      flex-shrink: 1;
+      width: 510px;
+    }
+
+    &_img {
+      margin-bottom: 45px;
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      height: 100%;
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-shrink: 1;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &_title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #333333;
+      margin: 0 0 20px;
+    }
+
+    .articles_text {
+      margin-bottom: auto;
+    }
+  }
+
+  .button_transparent {
+    min-width: 254px;
+  }
+}

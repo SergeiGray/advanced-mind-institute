@@ -251,7 +251,7 @@
     display: flex;
 
     &:not(:last-child) {
-      margin-bottom: 70px;
+      margin-bottom: 66px;
     }
 
     &_img {
@@ -392,13 +392,17 @@
   &_footer {
     display: flex;
     margin-top: auto;
+
+    .pagination_flipping {
+      margin-right: 108px;
+    }
   }
 
   &_aside {
     display: flex;
     flex-direction: column;
     padding-top: 5px;
-    width: 255px;
+    width: 245px;
 
     &_form {
       display: flex;
@@ -541,7 +545,7 @@
         content: '';
         position: absolute;
         bottom: 0;
-        right: 10px;
+        right: 0;
         width: 23px;
         height: 22px;
         background-image: url("data:image/svg+xml,%3Csvg width='23' height='22' viewBox='0 0 23 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.8033 4.1967C17.7322 7.12563 17.7322 11.8744 14.8033 14.8033C11.8744 17.7322 7.12563 17.7322 4.1967 14.8033C1.26777 11.8744 1.26777 7.12563 4.1967 4.1967C7.12563 1.26777 11.8744 1.26777 14.8033 4.1967ZM17.1949 15.0736C19.8924 11.3591 19.5666 6.13156 16.2175 2.78249C12.5075 -0.927495 6.49247 -0.927495 2.78249 2.78249C-0.927495 6.49247 -0.927495 12.5075 2.78249 16.2175C6.37387 19.8089 12.1253 19.9237 15.8548 16.5619L20.8137 21.5208C21.2042 21.9113 21.8374 21.9113 22.2279 21.5208C22.6184 21.1303 22.6184 20.4971 22.2279 20.1066L17.1949 15.0736Z' fill='%23777777'/%3E%3C/svg%3E%0A");

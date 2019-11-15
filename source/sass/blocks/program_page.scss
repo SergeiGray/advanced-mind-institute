@@ -324,6 +324,10 @@
           display: flex;
           flex-direction: column;
         }
+
+        .blockquote {
+          margin: 0 0 40px;
+        }
       }
     }
 
@@ -345,39 +349,6 @@
         line-height: 32px;
         margin: 0 0 29px;
       }
-
-      &_quote {
-        font-size: 20px;
-        line-height: 36px;
-        padding: 73px 40px 73px 57px;
-        margin: 0 0 40px;
-        background-image: url('../img/program_info_unit_quote_bg_desktop.png');
-        background-repeat: no-repeat;
-        background-position: 45% center;
-
-        &_text {
-          position: relative;
-          display: flex;
-
-          &::after,
-          &::before {
-            content: '';
-            position: absolute;
-            top: 5%;
-            height: 97%;
-            width: 2px;
-            background-color: #000000;
-          }
-
-          &::after {
-            left: -55px;
-          }
-
-          &::before {
-            left: -45px;
-          }
-        }
-      }
     }
   }
 
@@ -386,7 +357,6 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 326px;
-    margin-right: 10px;
 
     &_title {
       font-weight: 500;
@@ -566,7 +536,7 @@
 
       .feedback_slider {
         &_review {
-          width: 980px;
+          width: 970px;
 
           &.first_item {
             margin-bottom: 80px;
@@ -662,13 +632,8 @@
   .pagination {
     margin-bottom: 148px;
 
-    .wrapper {
-      justify-content: space-between;
-      align-items: center;
-    }
-
     &_flipping {
-      margin-right: 350px;
+      margin-right: 340px;
     }
   }
 }

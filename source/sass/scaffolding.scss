@@ -24,7 +24,7 @@ body {
 .wrapper {
   display: flex;
   box-sizing: border-box;
-  width: 1690px;
+  width: 1682px;
   margin: 0 auto;
 }
 
@@ -226,6 +226,10 @@ button {
   align-items: center;
   width: 100%;
 
+  .wrapper {
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &_list {
     @include list;
@@ -255,7 +259,6 @@ button {
 
   &_flipping {
     display: flex;
-    margin-right: 108px;
 
     &_buttom {
       cursor: pointer;
@@ -346,6 +349,96 @@ button {
 
   .icon {
     fill: black;
+  }
+}
+
+.separator_line {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: #D5D5D5;
+  border: none;
+  margin: 0;
+}
+
+.blockquote {
+  font-size: 20px;
+  line-height: 36px;
+  padding: 73px 40px 73px 57px;
+  margin: 0;
+  background-image: url('../img/program_info_unit_quote_bg_desktop.png');
+  background-repeat: no-repeat;
+  background-position: 45% center;
+
+  &_text {
+    position: relative;
+    display: flex;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5%;
+      height: 97%;
+      width: 2px;
+      background-color: #000000;
+    }
+
+    &::after {
+      left: -55px;
+    }
+
+    &::before {
+      left: -45px;
+    }
+  }
+}
+
+.social_networks {
+  display: flex;
+  align-items: center;
+
+  &_title {
+    @include text;
+    line-height: 18px;
+    color: #333333;
+    margin-right: 44px;
+  }
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    margin-right: 30px;
+    transition: .5s;
+
+    &:hover {
+      background-color: $hover-color;
+      border: 1px solid $hover-color;
+
+      .icon {
+        fill: #ffffff;
+      }
+    }
+
+    &:active {
+      background-color: $active-color;
+      border: 1px solid $hover-color;
+
+      .icon {
+        fill: #ffffff;
+      }
+    }
+
+    .icon {
+      fill: #797979;
+      transition: .5s;
+    }
   }
 }
 
